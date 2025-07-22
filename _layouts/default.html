@@ -1,1 +1,30 @@
-{% include head.html %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=1' }}">
+    {% include head.html %}
+  </head>
+  <body>
+    <header>
+      <h1>{{ site.title }}</h1>
+      {% if site.logo %}
+        <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}">
+      {% endif %}
+    </header>
+
+    <main>
+      {{ content }}
+    </main>
+
+    <footer>
+      {% if site.show_downloads %}
+        <p><a href="{{ site.github.repository_url }}/archive/refs/heads/main.zip">Download .zip</a></p>
+        <p><a href="{{ site.github.repository_url }}/tarball/main">Download .tar.gz</a></p>
+      {% endif %}
+    </footer>
+  </body>
+</html>
