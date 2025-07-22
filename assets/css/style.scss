@@ -1,3 +1,9 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+
 header img {
   border-radius: 50%;
   width: 150px;
@@ -6,4 +12,3 @@ header img {
   display: block;
   margin: 0 auto;
 }
-@import "{{ site.theme }}";
