@@ -1,9 +1,8 @@
-/* Make the headshot image rounded */
-img[src="/assets/img/Headshot.png"] {
+img[alt="Jacques van Heerden"] {
   border-radius: 50%;
-  width: 150px;     /* You can change this size */
-  height: 150px;    /* Keep it equal to width for perfect circle */
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   display: block;
-  margin: 0 auto;   /* Center the image horizontally */
+  margin: 0 auto;
 }
