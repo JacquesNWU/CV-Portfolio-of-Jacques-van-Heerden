@@ -21,11 +21,11 @@
 
 ### Education
 
-− BSc IT (Northwest University)
-− ITILv4 (Pink Elephant)
-− AZ900 (Microsoft)
-− CCNA /A+ (Exponant)
-− MCSA (CTU Training Solutions)
+- BSc IT (Northwest University)
+- ITILv4 (Pink Elephant)
+- AZ900 (Microsoft)
+- CCNA /A+ (Exponant)
+- MCSA (CTU Training Solutions)
 - MCSE (CTU Training Solutions)
 
 ### International Qualifications
@@ -175,15 +175,15 @@ Job Description:
 
 ### Technical Skills
 
-− Cloud Computing
-− Virtualization
-− Networking
-− Scripting
-− End-user Support
-− Automation Tools
-− Security
-− Database Management
-− Software Development
+- Cloud Computing
+- Virtualization
+- Networking
+- Scripting
+- End-user Support
+- Automation Tools
+- Security
+- Database Management
+- Software Development
 
 ### Interpersonal Skills
 
@@ -197,15 +197,15 @@ Job Description:
 ### Technologies
 
 - Windows Server (2008/2012/2016/2019)
-− Fortinet, Mikrotik, SonicWALL
-− Cisco Meraki, VMware ESXi, VPN
-− Microsoft 365, Google Workspace, Azure AD
-− ThreatLocker, Huntress, ESET, Sophos
-− ConnectWise, Kaseya VSA, PIA
-− Veeam, Acronis, Datto
-− PowerShell, Batch Scripting
-− IT Glue, Snipe-IT
-− Altigen, Euphoria, Microsoft Teams, 3CX
-− Java, C#.NET, ASP.NET, Python, SQL
+- Fortinet, Mikrotik, SonicWALL
+- Cisco Meraki, VMware ESXi, VPN
+- Microsoft 365, Google Workspace, Azure AD
+- ThreatLocker, Huntress, ESET, Sophos
+- ConnectWise, Kaseya VSA, PIA
+- Veeam, Acronis, Datto
+- PowerShell, Batch Scripting
+- IT Glue, Snipe-IT
+- Altigen, Euphoria, Microsoft Teams, 3CX
+- Java, C#.NET, ASP.NET, Python, SQL
 
 
