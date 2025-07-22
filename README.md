@@ -3,23 +3,23 @@
 ---
 
 ### Contact Information
-- First Name: Jacques
-- Last Name: van Heerden
-- Driver’s License: Yes (Code B)
-- Own Transport: Yes
-- Date of Birth: 27 October 1997
-- Languages: English, Afrikaans
-- Criminal Offences: None
-- Nationality: South African
-- Phone Number: (+27) 83 652 9714
-- Email Address: jvanheerden38@gmail.com
-- LinkedIn: https://www.linkedin.com/in/jacques-van-heerden-3317a0139/
-- GitHub: https://github.com/JacquesNWU
+- **First Name**: Jacques
+- **Last Name:** van Heerden
+- **Driver’s License:** Yes (Code B)
+- **Own Transport:** Yes
+- **Date of Birth:** 27 October 1997
+- **Languages:** English, Afrikaans
+- **Criminal Offences:** None
+- **Nationality:** South African
+- **Phone Number:** (+27) 83 652 9714
+- **Email Address:** jvanheerden38@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/jacques-van-heerden-3317a0139/
+- **GitHub:** https://github.com/JacquesNWU
 
 ---
 
 ### About Me
-- As a solutions engineer with expertise in AI implementation and helpdesk automation, I have a solid IT foundation complemented by my academic background. I am particularly drawn to penetration testing and web application security, while also dedicating time outside of work hours to developing machine learning models and exploring AI-driven software development.
+As a solutions engineer with expertise in AI implementation and helpdesk automation, I have a solid IT foundation complemented by my academic background. I am particularly drawn to penetration testing and web application security, while also dedicating time outside of work hours to developing machine learning models and exploring AI-driven software development.
 
 ---
 
