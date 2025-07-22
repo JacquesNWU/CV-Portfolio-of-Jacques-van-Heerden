@@ -1,1 +1,9 @@
-
+/* Make the headshot image rounded */
+img[src="/assets/img/Headshot.png"] {
+  border-radius: 50%;
+  width: 150px;     /* You can change this size */
+  height: 150px;    /* Keep it equal to width for perfect circle */
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;   /* Center the image horizontally */
+}
