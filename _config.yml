@@ -3,11 +3,9 @@ logo: /assets/img/Headshot.png
 show_downloads: true
 theme: jekyll-theme-minimal
 
-# Tell Jekyll to use your custom style.scss
 sass:
   style: compressed
 
-# Optional: If this doesn’t apply automatically, set this:
 defaults:
   -
     scope:
