@@ -1,15 +1,41 @@
-title: Jacques van Heerden
+title: "Jacques van Heerden"
+email: jvanheerden38@gmail.com
 logo: /assets/img/Headshot.png
-show_downloads: true
-theme: jekyll-theme-minimal
+description: >-
+  Portfolio of Jacques van Heerden. Showcasing experience, projects, skills, and contact details.
 
-sass:
-  style: compressed
+# Theme setup
+remote_theme: "mmistakes/minimal-mistakes@latest"
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      layout: default
-      stylesheet: /assets/css/style.scss
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Minimal Mistakes Skin
+minimal_mistakes_skin: "default"
+
+# Navigation
+nav:
+  - title: "Home"
+    url: /
+  - title: "About"
+    url: /about/
+  - title: "Experience"
+    url: /experience/
+  - title: "Projects"
+    url: /projects/
+  - title: "Skills"
+    url: /skills/
+  - title: "Contact"
+    url: /contact/
+
+# Author (for SEO/social)
+author:
+  name: "Jacques van Heerden"
+  avatar: "/assets/img/Headshot.png"
+  bio: "Solutions Engineer | Software Developer | AI/Automation Engineer"
