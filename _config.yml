@@ -2,6 +2,3 @@ title: Jacques van Heerden
 logo: /assets/img/Headshot.png
 show_downloads: true
 theme: jekyll-theme-minimal
-
-plugins:
-  - jekyll-include-cache
