@@ -137,8 +137,8 @@ Job Description:
 
 ---
 
-Junior IT Manager | Laerskool Kenmare | 2018/11/05 – 2019/03/30
-Employment Duration – 6 Months
+**Junior IT Manager | Laerskool Kenmare | 2018/11/05 – 2019/03/30
+Employment Duration – 6 Months**
 Job Description:
 
 - Maintained school IT infrastructure, including servers, Wi-Fi, and smart classrooms.
@@ -177,20 +177,20 @@ Job Description:
 
 ---
 
-- 2024: DVD Store Project
+2024: DVD Store Project
 
 ---
 
-- 2024: NWU 312 Exam Project (Medical System Booking)
+2024: NWU 312 Exam Project (Medical System Booking)
 
 ---
 
 ### Awards
-2021 - IT Performer of the Year: Prime Meridian Direct
+2021 - **IT Performer of the Year:** Prime Meridian Direct
 
-2024 - Golden Key International Honour Society: North-West University
+2024 - **Golden Key International Honour Society:** North-West University
 
-2024 - Team Player Award: Scaled Recognised for exceptional communication skills, a consistently uplifting attitude, and fostering a positive, cohesive team environment.
+2024 - **Team Player Award:** Scaled Recognised for exceptional communication skills, a consistently uplifting attitude, and fostering a positive, cohesive team environment.
 
 ---
 
