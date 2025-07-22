@@ -1,5 +1,4 @@
 # L3 Solutions Engineer
-![Headshot](assets/img/Headshot.png)
 
 ### Contact Information
 
