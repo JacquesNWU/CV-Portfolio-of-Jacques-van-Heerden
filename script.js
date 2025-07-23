@@ -1,4 +1,6 @@
-//turn pages when click next or prev button
+/****************************************************************/
+/* Jacques van Heerden (35317906) - Page Turning on Click      */
+/****************************************************************/
 const pageTurnBtn = document.querySelectorAll('.nextprev-btn');
 
 pageTurnBtn.forEach((el, index) => {
@@ -21,7 +23,9 @@ pageTurnBtn.forEach((el, index) => {
     }
 })
 
-//contact me button when click
+/****************************************************************/
+/* Jacques van Heerden (35317906) - Contact Me Button Action   */
+/****************************************************************/
 const pages = document.querySelectorAll('.book-page.page-right');
 const contactMeBtn = document.querySelector('.btn.contact-me');
 
@@ -38,7 +42,9 @@ contactMeBtn.onclick = () => {
     })
 }
 
-//create reverse index function
+/****************************************************************/
+/* Jacques van Heerden (35317906) - Reverse Index Function      */
+/****************************************************************/
 let totalPages = pages.length;
 let pageNumber = 0;
 
@@ -49,7 +55,9 @@ function reverseIndex() {
     }
 }
 
-//back profile button when click
+/****************************************************************/
+/* Jacques van Heerden (35317906) - Back to Profile Button      */
+/****************************************************************/
 const backProfileBtn = document.querySelector('.back-profile');
 
 backProfileBtn.onclick = () => {
@@ -67,11 +75,15 @@ backProfileBtn.onclick = () => {
     })
 }
 
-//opening animation
+/****************************************************************/
+/* Jacques van Heerden (35317906) - Opening Animations Setup    */
+/****************************************************************/
 const coverRight = document.querySelector('.cover.cover-right');
 const pageLeft = document.querySelector('.book-page.page-left');
 
-//opening animation (cover right animation)
+/****************************************************************/
+/* Jacques van Heerden (35317906) - Animate Cover Right        */
+/****************************************************************/
 setTimeout(() => {
     coverRight.classList.add('turn');
 }, 2100)
@@ -80,12 +92,16 @@ setTimeout(() => {
     coverRight.style.zIndex = -1;
 }, 2800)
 
-//opening animation (page left or profile page animation)
+/****************************************************************/
+/* Jacques van Heerden (35317906) - Animate Left Profile Page  */
+/****************************************************************/
 setTimeout(() => {
     pageLeft.style.zIndex = 20;
 }, 3200)
 
-//opening animation (all page right animation)
+/****************************************************************/
+/* Jacques van Heerden (35317906) - Animate Right Pages Init   */
+/****************************************************************/
 pages.forEach((_, index) => {
     setTimeout(() => {
         reverseIndex();
