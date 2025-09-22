@@ -1,169 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jacques van Heerden - Book Portfolio</title>
+    <title>Jacques van Heerden</title>
     <link rel="stylesheet" href="style.css">
+    <!-------------------------------------------------------------->
+    <!-- Jacques van Heerden (35317906) - Box Icons Import         -->
+    <!-------------------------------------------------------------->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body>
-    
-    <!-------------------------------------------------------------->
-    <!-- Jacques van Heerden (35317906) - Book Container          -->
-    <!-------------------------------------------------------------->
-    <div class="wrapper">
-        <div class="book">
 
+<body>
+
+    <div class="wrapper">
+        <div class="cover cover-left"></div>
+        <div class="cover cover-right"></div>
+
+        <div class="book">
             <!-------------------------------------------------------------->
-            <!-- Jacques van Heerden (35317906) - Page 1 & 2              -->
+            <!-- Profile Page                                              -->
             <!-------------------------------------------------------------->
             <div class="book-page page-left">
                 <div class="profile-page">
-                    <img src="profile.jpg" alt="Profile">
-                    <h1>Jacques van Heerden</h1>
-                    <h3>BSc IT Student | Solutions Engineer</h3>
+                    <img src="photo.jpg" alt="">
+                    <h2>Jacques van Heerden</h2>
+                    <h3>Solutions Engineer</h3>
 
                     <div class="social-media">
-                        <a href="#"><i class='bx bxl-linkedin'></i></a>
-                        <a href="#"><i class='bx bxl-github'></i></a>
-                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61563952623479"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://www.linkedin.com/in/jacques-van-heerden-3317a0139/"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/JacquesNWU"><i class='bx bxl-github'></i></a>
                     </div>
 
-                    <p>
-                        Welcome to my interactive portfolio.  
-                        I am passionate about IT, automation, and problem-solving.  
-                        Here you’ll find my favourite books, technical skills, and more.
-                    </p>
+                    <p>Hi, I'm Jacques — a solutions engineer passionate about AI, helpdesk automation, and cybersecurity. I have a strong IT foundation, a knack for penetration testing, and I spend my free time exploring AI-driven development.</p>
 
                     <div class="btn-box">
-                        <a href="CV.pdf" class="btn">Download CV</a>
-                        <a href="mailto:jacques@example.com" class="btn contact-me">Contact Me</a>
+                        <a href="https://github.com/JacquesNWU/CV-Portfolio-of-Jacques-van-Heerden/blob/main/Curriculum%20Vitae%20of%20Jacques%20van%20Heerden.pdf" class="btn">Download CV</a>
+                        <a href="#" class="btn contact-me">Contact Me</a>
                     </div>
                 </div>
             </div>
 
             <!-------------------------------------------------------------->
-            <!-- Jacques van Heerden (35317906) - Page 3 & 4              -->
+            <!-- Page 1 & 2: Experience + Education                        -->
+            <!-------------------------------------------------------------->
+            <div class="book-page page-right turn" id="turn-1">
+                <!-- Page 1: Experience -->
+                <div class="page-front">
+                    <h2 class="title">Professional Experience</h2>
+
+                    <div class="workeduc-box">
+                        <div class="workeduc-content">
+                            <span class="year">2023 - Current</span>
+                            <h3>Solutions Engineer - Scaled INC</h3>
+                            <p>Enhanced helpdesk operations through automation while securing client environments with proactive cybersecurity and incident response.</p>
+                        </div>
+
+                        <div class="workeduc-content">
+                            <span class="year">2021 - 2023</span>
+                            <h3>IT Supervisor - Prime</h3>
+                            <p>Led IT operations, infrastructure upgrades, cybersecurity initiatives, and team management for enterprise-wide technology support and improvement.</p>
+                        </div>
+
+                        <div class="workeduc-content">
+                            <span class="year">2019 - 2021</span>
+                            <h3>Technical Support - Backend IT (Pty) Ltd</h3>
+                            <p>Delivered end-to-end IT support and consulting for SMBs, including infrastructure design, M365 migrations, cybersecurity, and client management.</p>
+                        </div>
+                    </div>
+
+                    <span class="number-page">1</span>
+                    <span class="nextprev-btn" data-page="turn-1"><i class='bx bx-chevron-right'></i></span>
+                </div>
+
+                <!-- Page 2: Education -->
+                <div class="page-back">
+                    <h1 class="title">Education</h1>
+
+                    <div class="workeduc-box">
+                        <div class="workeduc-content">
+                            <span class="year">2021 - 2025</span>
+                            <h3>B.Sc IT - Northwest University</h3>
+                            <p>A comprehensive degree blending programming, networking, and cybersecurity to prepare me for a diverse IT career.</p>
+                        </div>
+
+                        <div class="workeduc-content">
+                            <span class="year">2018 - 2023</span>
+                            <h3>A+/CCNA/Azure/ITILv4</h3>
+                            <p>Certified in foundational IT support, networking, Azure Fundamentals, and IT service management (ITIL v4).</p>
+                        </div>
+
+                        <div class="workeduc-content">
+                            <span class="year">2016 - 2017</span>
+                            <h3>MCSA/MCSE - CTU Training Solutions</h3>
+                            <p>Comprehensive Microsoft certifications focusing on Windows Server administration, cloud technologies, and enterprise infrastructure management.</p>
+                        </div>
+                    </div>
+
+                    <span class="number-page">2</span>
+                    <span class="nextprev-btn back" data-page="turn-1"><i class='bx bx-chevron-left'></i></span>
+                </div>
+            </div>
+
+            <!-------------------------------------------------------------->
+            <!-- Page 3 & 4: Favourite Books + Skills                      -->
             <!-------------------------------------------------------------->
             <div class="book-page page-right turn" id="turn-2">
-                <!-------------------------------------------------------------->
-                <!-- Page 3: Favourite Books                                -->
-                <!-------------------------------------------------------------->
+                <!-- Page 3: Favourite Books -->
                 <div class="page-front">
                     <h1 class="title">Favourite Books</h1>
 
-                    <div class="books-box">
-                        <div class="book-entry">
+                    <div class="services-box">
+                        <div class="services-content">
                             <h3>The Holy Bible (KJV)</h3>
                             <p>A timeless guide for faith, wisdom, and moral living.</p>
                         </div>
 
-                        <div class="book-entry">
+                        <div class="services-content">
                             <h3>The 7 Habits of Highly Effective People – Stephen R. Covey</h3>
                             <p>Principles for personal growth, leadership, and effectiveness.</p>
                         </div>
 
-                        <div class="book-entry">
+                        <div class="services-content">
                             <h3>The Power to Change – Craig Groeschel</h3>
                             <p>A practical guide to building habits that align with who you want to become.</p>
                         </div>
 
-                        <div class="book-entry">
+                        <div class="services-content">
                             <h3>Thinking, Fast and Slow – Daniel Kahneman</h3>
                             <p>An exploration of human decision-making, intuition, and rational thought.</p>
                         </div>
                     </div>
 
                     <span class="number-page">3</span>
-                    <span class="nextprev-btn" data-page="turn-2">
-                        <i class='bx bx-chevron-right'></i>
-                    </span>
+                    <span class="nextprev-btn" data-page="turn-2"><i class='bx bx-chevron-right'></i></span>
                 </div>
 
-                <!-------------------------------------------------------------->
-                <!-- Page 4: Skills                                          -->
-                <!-------------------------------------------------------------->
+                <!-- Page 4: Skills -->
                 <div class="page-back">
                     <h1 class="title">My Skills</h1>
-                
+
                     <div class="skills-box">
                         <div class="skills-content">
                             <h3>Development & Scripting</h3>
                             <div class="content">
-                                <span><i class='bx bx-code-alt'></i>C#.NET</span>
-                                <span><i class='bx bx-globe'></i>ASP.NET</span>
-                                <span><i class='bx bxl-css3'></i>CSS</span>
-                                <span><i class='bx bxl-javascript'></i>JavaScript</span>
-                                <span><i class='bx bxl-python'></i>Python</span>
-                                <span><i class='bx bxl-java'></i>Java</span>
-                                <span><i class='bx bx-data'></i>SQL</span>
-                                <span><i class='bx bxs-data'></i>Oracle</span>
-                                <span><i class='bx bxl-windows'></i>PowerShell</span>
+                                <span>C#.NET</span>
+                                <span>ASP.NET</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Python</span>
+                                <span>Java</span>
+                                <span>SQL</span>
+                                <span>Oracle</span>
+                                <span>PowerShell</span>
                             </div>
                         </div>
-                
+
                         <div class="skills-content">
                             <h3>Security Tools</h3>
                             <div class="content">
-                                <span><i class='bx bx-network-chart'></i>Nmap</span>
-                                <span><i class='bx bx-bug'></i>Metasploit</span>
-                                <span><i class='bx bx-shield'></i>Burp Suite</span>
+                                <span>Nmap</span>
+                                <span>Metasploit</span>
+                                <span>Burp Suite</span>
                             </div>
                         </div>
                     </div>
-                
+
                     <span class="number-page">4</span>
-                    <span class="nextprev-btn back" data-page="turn-2">
-                        <i class='bx bx-chevron-left'></i>
-                    </span>
+                    <span class="nextprev-btn back" data-page="turn-2"><i class='bx bx-chevron-left'></i></span>
                 </div>
             </div>
 
             <!-------------------------------------------------------------->
-            <!-- Jacques van Heerden (35317906) - Page 5 & 6              -->
+            <!-- Page 5 & 6: Portfolio + Contact                           -->
             <!-------------------------------------------------------------->
             <div class="book-page page-right turn" id="turn-3">
-                <!-------------------------------------------------------------->
-                <!-- Page 5: Projects                                       -->
-                <!-------------------------------------------------------------->
+                <!-- Page 5: Portfolio -->
                 <div class="page-front">
-                    <h1 class="title">Projects</h1>
-                    <div class="projects-box">
-                        <div class="project-entry">
-                            <h3>Helpdesk Automation</h3>
-                            <p>Designed automation workflows for ticket routing, knowledge base integration, and AI-driven support.</p>
+                    <h2 class="title">My Speediest Project to Date</h2>
+
+                    <div class="portfolio-box">
+                        <div class="img-box">
+                            <img src="portfolio.jpg" alt="">
                         </div>
 
-                        <div class="project-entry">
-                            <h3>Network Infrastructure Upgrade</h3>
-                            <p>Planned and executed firmware upgrades for enterprise-level devices with zero downtime.</p>
+                        <div class="info-box">
+                            <div class="info-title">
+                                <h3>Brighton Medical System</h3>
+                                <a href="https://youtu.be/3U7p3gVPq2c">Live Preview<i class='bx bx-link-external'></i></a>
+                            </div>
+                            <p>Description:</p>
+                            <p>A two-week build combining a desktop app and a web portal with secure admin/client logins. Built in ASP.NET with smart use of cookies and caching for fast, seamless healthcare access.</p>
+                        </div>
+
+                        <div class="btn-box">
+                            <a href="https://github.com/JacquesNWU/Brighton-Medical/tree/main?tab=readme-ov-file#brighton-medical" class="btn">Source Code</a>
+                            <a href="https://github.com/JacquesNWU" class="btn">More Projects</a>
                         </div>
                     </div>
 
                     <span class="number-page">5</span>
-                    <span class="nextprev-btn" data-page="turn-3">
-                        <i class='bx bx-chevron-right'></i>
-                    </span>
+                    <span class="nextprev-btn" data-page="turn-3"><i class='bx bx-chevron-right'></i></span>
                 </div>
 
-                <!-------------------------------------------------------------->
-                <!-- Page 6: Contact                                         -->
-                <!-------------------------------------------------------------->
+                <!-- Page 6: Contact -->
                 <div class="page-back">
-                    <h1 class="title">Contact</h1>
+                    <h1 class="title">Contact Me!</h1>
                     <div class="contact-box">
-                        <p><i class='bx bx-envelope'></i> jacques@example.com</p>
-                        <p><i class='bx bx-phone'></i> +27 82 123 4567</p>
-                        <p><i class='bx bx-map'></i> Johannesburg, South Africa</p>
+                        <form action="https://formspree.io/f/xvgqkwkz" method="POST">
+                            <input type="text" name="name" class="field" placeholder="Full Name" required>
+                            <input type="email" name="_replyto" class="field" placeholder="Email Address" required>
+                            <textarea name="message" cols="30" rows="10" class="field" placeholder="Your Message" required></textarea>
+                            <input type="submit" class="btn" value="Send Message">
+                        </form>
                     </div>
+
                     <span class="number-page">6</span>
-                    <span class="nextprev-btn back" data-page="turn-3">
-                        <i class='bx bx-chevron-left'></i>
-                    </span>
+                    <span class="nextprev-btn back" data-page="turn-3"><i class='bx bx-chevron-left'></i></span>
+
+                    <a href="#" class="back-profile">
+                        <p>Profile</p>
+                        <i class='bx bxs-user'></i>
+                    </a>
                 </div>
             </div>
-
         </div>
     </div>
 
