@@ -115,16 +115,21 @@ body {
 }
 
 .profile-page h1 {
-  font-size: 2.5rem;
-  line-height: 1;
-  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  font-weight: 600;
   letter-spacing: .05rem;
-  text-shadow: 0 0 .2rem rgba(0, 171, 240, .3);
-  color: var(--text-color);
+  background: linear-gradient(45deg, var(--main-color), #006e9a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding: .2rem .5rem;
+  border-radius: .3rem;
+  margin-bottom: .5rem;
 }
 
 .profile-page h3 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--main-color);
 }
 
@@ -326,13 +331,13 @@ body {
 .skills-box {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.2rem;
-  justify-content: space-between;
+  gap: 1.5rem;
+  justify-content: center;
 }
 
 .skills-box .skills-content {
-  flex: 1 1 16rem;
-  min-width: 14rem;
+  flex: 1 1 18rem;
+  min-width: 16rem;
   padding: 1rem;
   border: var(--border);
   border-radius: .5rem;
@@ -346,14 +351,14 @@ body {
 .skills-content h3 {
   font-size: 1.2rem;
   line-height: 1;
-  margin-bottom: .8rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
 .skills-content .content {
   display: flex;
   flex-wrap: wrap;
-  gap: .8rem;
+  gap: 1rem;
   justify-content: center;
 }
 
@@ -362,12 +367,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 5rem;
-  height: 4rem;
+  width: 5.5rem;
+  height: 4.5rem;
   border: var(--border);
   border-radius: .3rem;
   font-weight: 500;
-  font-size: .9rem;
+  font-size: 1rem;
   transition: .3s ease;
   text-align: center;
 }
@@ -377,24 +382,24 @@ body {
 }
 
 .skills-content .content span i {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: var(--main-color);
-  margin-bottom: .3rem;
+  margin-bottom: .4rem;
 }
 
 .skills-content .ai-tools-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: left;
+  text-align: center;
 }
 
 .skills-content .ai-tools-list li {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--text-color);
-  margin-bottom: .5rem;
-  display: flex;
-  align-items: center;
+  margin-bottom: .6rem;
+  display: inline-block;
+  margin-right: 1rem;
 }
 
 .skills-content .ai-tools-list li::before {
@@ -463,9 +468,12 @@ body {
 
 .contact-box {
   text-align: center;
-  max-width: 90%;
-  margin: 0 auto;
-  padding: 1rem;
+  max-width: 85%;
+  margin: 1.5rem auto;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, .05);
+  border-radius: .5rem;
+  box-shadow: var(--box-shadow);
 }
 
 .contact-box .field {
@@ -473,15 +481,15 @@ body {
   background: transparent;
   border: var(--border);
   border-radius: .3rem;
-  padding: .8rem;
+  padding: .9rem;
   font-size: 1rem;
   color: var(--text-color);
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
   transition: .3s ease;
 }
 
 .contact-box .field:focus {
-  box-shadow: 0 0 .3rem var(--main-color);
+  box-shadow: 0 0 .4rem var(--main-color);
 }
 
 .contact-box .field::placeholder {
@@ -490,13 +498,20 @@ body {
 
 .contact-box textarea {
   resize: none;
-  height: 12rem;
+  height: 10rem;
 }
 
 .contact-box .btn {
   cursor: pointer;
-  width: 8rem;
-  margin: 0 auto;
+  width: 10rem;
+  margin: 1rem auto;
+  background: var(--main-color);
+  color: var(--white-color);
+}
+
+.contact-box .btn:hover {
+  background: transparent;
+  color: var(--main-color);
 }
 
 .back-profile {
@@ -552,6 +567,7 @@ body {
 
   .profile-page h1 {
     font-size: 2rem;
+    padding: .2rem .4rem;
   }
 
   .profile-page h3 {
@@ -560,7 +576,7 @@ body {
 
   .skills-box {
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.2rem;
   }
 
   .skills-box .skills-content {
@@ -570,36 +586,37 @@ body {
   }
 
   .skills-content .content {
-    gap: .6rem;
+    gap: .8rem;
   }
 
   .skills-content .content span {
-    width: 4rem;
-    height: 3.2rem;
-    font-size: .8rem;
+    width: 4.5rem;
+    height: 3.8rem;
+    font-size: .9rem;
   }
 
   .skills-content .content span i {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .skills-content .ai-tools-list li {
-    font-size: .9rem;
-    margin-bottom: .4rem;
+    font-size: 1rem;
+    margin-right: .8rem;
   }
 
   .contact-box {
-    max-width: 100%;
-    padding: 0.8rem;
+    max-width: 95%;
+    padding: 1rem;
+    margin: 1rem auto;
   }
 
   .contact-box .field {
-    padding: .6rem;
-    margin-bottom: 1rem;
+    padding: .7rem;
+    margin-bottom: 1.2rem;
   }
 
   .contact-box textarea {
-    height: 10rem;
+    height: 8rem;
   }
 
   .book-page.page-right {
@@ -619,6 +636,7 @@ body {
 
   .profile-page h1 {
     font-size: 1.8rem;
+    padding: .15rem .3rem;
   }
 
   .profile-page h3 {
@@ -626,30 +644,32 @@ body {
   }
 
   .skills-content .content span {
-    width: 3.5rem;
-    height: 2.8rem;
-    font-size: .7rem;
-  }
-
-  .skills-content .content span i {
-    font-size: 1.4rem;
-  }
-
-  .skills-content .ai-tools-list li {
+    width: 4rem;
+    height: 3.2rem;
     font-size: .8rem;
   }
 
-  .btn {
-    width: 8rem;
-    height: 2.5rem;
+  .skills-content .content span i {
+    font-size: 1.6rem;
+  }
+
+  .skills-content .ai-tools-list li {
     font-size: .9rem;
+    margin-right: .6rem;
   }
 
   .contact-box .field {
     font-size: .9rem;
+    padding: .6rem;
   }
 
   .contact-box textarea {
-    height: 8rem;
+    height: 7rem;
+  }
+
+  .contact-box .btn {
+    width: 8rem;
+    height: 2.5rem;
+    font-size: .9rem;
   }
 }
