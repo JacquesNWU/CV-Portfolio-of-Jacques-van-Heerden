@@ -1,14 +1,14 @@
 /* Jacques van Heerden (35317906) - Contact Page Styling */
 .contact-box {
   text-align: center;
-  max-width: 70%; /* Reduced to fit within book page width */
-  margin: 2rem auto; /* Adjusted margin for book padding */
-  padding: 2rem; /* Consistent padding */
+  max-width: 70%;
+  margin: 2rem auto;
+  padding: 2rem;
   background: linear-gradient(135deg, rgba(255, 255, 255, .2), rgba(255, 255, 255, .05));
   border-radius: .8rem;
   box-shadow: var(--box-shadow);
   transition: transform .3s ease, box-shadow .3s ease;
-  max-height: 65vh; /* Reduced to fit within page height */
+  max-height: 65vh;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@
 }
 
 .contact-box .field {
-  width: 85%; /* Reduced width to fit comfortably */
+  width: 85%;
   background: rgba(255, 255, 255, .15);
   border: var(--border);
   border-radius: .6rem;
@@ -45,7 +45,7 @@
 
 .contact-box textarea {
   resize: none;
-  height: 6rem; /* Reduced height to fit */
+  height: 6rem;
 }
 
 .contact-box .btn {
@@ -70,8 +70,8 @@
 /* Jacques van Heerden (35317906) - Page Navigation Arrows */
 .nextprev-btn {
   position: absolute;
-  bottom: 1rem; /* Aligned to bottom */
-  right: 1rem; /* Moved to bottom right of right page */
+  bottom: 1rem;
+  right: 1rem;
   width: 2.5rem;
   height: 2.5rem;
   cursor: pointer;
@@ -94,17 +94,17 @@
 }
 
 .nextprev-btn.back {
-  left: 1rem; /* Moved to bottom left of left page */
+  left: 1rem;
   right: auto;
 }
 
 /* Ensure book pages have proper padding to accommodate arrows */
 .book-page.page-left {
-  padding: 2rem 1rem 2.5rem 2rem; /* Adjusted padding for bottom left arrow */
+  padding: 2rem 1rem 2.5rem 2rem;
 }
 
 .book-page.page-right {
-  padding: 2rem 2.5rem 2.5rem 1rem; /* Adjusted padding for bottom right arrow */
+  padding: 2rem 2.5rem 2.5rem 1rem;
   transition: transform 0.8s cubic-bezier(.645, .045, .355, 1);
 }
 
