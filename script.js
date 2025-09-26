@@ -14,7 +14,7 @@ function createClickCircle(event) {
 
     setTimeout(() => {
         circle.remove();
-    }, 1000);
+    }, 2000); // Match 2-second animation duration
 }
 
 /****************************************************************/
@@ -22,7 +22,10 @@ function createClickCircle(event) {
 /****************************************************************/
 const interactiveElements = document.querySelectorAll('.btn, .nextprev-btn, .social-media a, .back-profile');
 interactiveElements.forEach(el => {
-    el.addEventListener('click', createClickCircle);
+    el.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default actions if any
+        createClickCircle(event);
+    });
 });
 
 /****************************************************************/
