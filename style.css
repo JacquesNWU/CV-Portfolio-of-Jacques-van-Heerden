@@ -117,10 +117,10 @@ body {
 }
 
 .profile-page h1 {
-  font-size: 2.2rem;
+  font-size: 2.1rem;
   line-height: 1;
   font-weight: 600;
-  letter-spacing: .03rem;
+  letter-spacing: .02rem;
   white-space: nowrap;
   background: linear-gradient(45deg, var(--main-color), #006e9a);
   -webkit-background-clip: text;
@@ -153,6 +153,8 @@ body {
   color: var(--main-color);
   margin: 0 .2rem;
   transition: .5s;
+  position: relative;
+  overflow: hidden;
 }
 
 .profile-page .social-media a:hover {
@@ -183,6 +185,8 @@ body {
   font-weight: 500;
   margin: 0 1rem;
   transition: .5s;
+  position: relative;
+  overflow: hidden;
 }
 
 .btn:hover {
@@ -286,6 +290,8 @@ body {
   justify-content: center;
   align-items: center;
   transition: .5s;
+  position: relative;
+  overflow: hidden;
 }
 
 .nextprev-btn:hover {
@@ -336,14 +342,14 @@ body {
 .skills-box {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.8rem;
+  gap: 2rem;
   justify-content: center;
 }
 
 .skills-box .skills-content {
-  flex: 1 1 20rem;
-  min-width: 18rem;
-  padding: 1.2rem;
+  flex: 1 1 22rem;
+  min-width: 20rem;
+  padding: 1.5rem;
   border: var(--border);
   border-radius: .5rem;
   transition: .3s ease;
@@ -354,16 +360,16 @@ body {
 }
 
 .skills-content h3 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   line-height: 1;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
 .skills-content .content {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.2rem;
+  gap: 1.5rem;
   justify-content: center;
 }
 
@@ -372,46 +378,26 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 6rem;
-  height: 4.8rem;
+  width: 6.5rem;
+  height: 5rem;
   border: var(--border);
-  border-radius: .3rem;
+  border-radius: .4rem;
   font-weight: 500;
   font-size: 1.1rem;
   transition: .3s ease;
   text-align: center;
+  padding: .5rem;
 }
 
 .skills-content .content span:hover {
   box-shadow: var(--box-shadow);
+  transform: translateY(-0.2rem);
 }
 
 .skills-content .content span i {
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   color: var(--main-color);
   margin-bottom: .5rem;
-}
-
-.skills-content .ai-tools-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-.skills-content .ai-tools-list li {
-  font-size: 1.2rem;
-  color: var(--text-color);
-  margin-bottom: .8rem;
-  display: inline-block;
-  margin-right: 1.2rem;
-}
-
-.skills-content .ai-tools-list li::before {
-  content: '\2022';
-  color: var(--main-color);
-  font-size: 1.3rem;
-  margin-right: .6rem;
 }
 
 .portfolio-box .img-box {
@@ -471,54 +457,61 @@ body {
   margin: 0 1.15rem;
 }
 
+/* Jacques van Heerden (35317906) - Contact Page Styling */
 .contact-box {
   text-align: center;
-  max-width: 80%;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, .1);
-  border-radius: .5rem;
+  max-width: 75%;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, .05));
+  border-radius: .8rem;
   box-shadow: var(--box-shadow);
-  transition: transform .3s ease;
+  transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .contact-box:hover {
-  transform: translateY(-0.2rem);
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0 .8rem rgba(0, 171, 240, .3);
 }
 
 .contact-box .field {
   width: 100%;
-  background: rgba(255, 255, 255, .05);
+  background: rgba(255, 255, 255, .1);
   border: var(--border);
-  border-radius: .4rem;
-  padding: 1rem;
-  font-size: 1rem;
+  border-radius: .6rem;
+  padding: 1.2rem;
+  font-size: 1.1rem;
   color: var(--text-color);
-  margin-bottom: 1.8rem;
+  margin-bottom: 2.2rem;
   transition: .3s ease;
 }
 
 .contact-box .field:focus {
-  box-shadow: 0 0 .5rem var(--main-color);
-  background: rgba(255, 255, 255, .15);
+  border-color: var(--main-color);
+  background: rgba(255, 255, 255, .2);
+  box-shadow: 0 0 .8rem var(--main-color);
 }
 
 .contact-box .field::placeholder {
   color: var(--second-text-color);
+  font-weight: 400;
 }
 
 .contact-box textarea {
   resize: none;
-  height: 8rem;
+  height: 7rem;
 }
 
 .contact-box .btn {
   cursor: pointer;
-  width: 10rem;
-  margin: 1.2rem auto;
+  width: 11rem;
+  height: 3.2rem;
+  margin: 1.5rem auto;
   background: var(--main-color);
   color: var(--white-color);
-  border-radius: .4rem;
+  border-radius: .6rem;
+  font-size: 1.1rem;
+  font-weight: 600;
   transition: .3s ease;
 }
 
@@ -543,6 +536,8 @@ body {
   justify-content: center;
   align-items: center;
   transition: .5s;
+  position: relative;
+  overflow: hidden;
 }
 
 .back-profile:hover {
@@ -567,6 +562,29 @@ body {
   top: -1.8rem;
 }
 
+/* Jacques van Heerden (35317906) - Click Animation Styling */
+.click-circle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, rgba(0, 171, 240, 0.7), rgba(0, 171, 240, 0.2));
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0);
+  animation: clickRipple 1s ease-out forwards;
+}
+
+@keyframes clickRipple {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .wrapper {
@@ -584,7 +602,7 @@ body {
   }
 
   .profile-page h1 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     padding: .15rem .3rem;
   }
 
@@ -604,45 +622,43 @@ body {
   .skills-box .skills-content {
     flex: 1 1 100%;
     min-width: 100%;
-    padding: 1rem;
+    padding: 1.2rem;
   }
 
   .skills-content .content {
-    gap: 1rem;
+    gap: 1.2rem;
   }
 
   .skills-content .content span {
-    width: 5rem;
-    height: 4rem;
+    width: 5.5rem;
+    height: 4.2rem;
     font-size: 1rem;
   }
 
   .skills-content .content span i {
-    font-size: 2rem;
-  }
-
-  .skills-content .ai-tools-list li {
-    font-size: 1.1rem;
-    margin-right: 1rem;
+    font-size: 2.2rem;
   }
 
   .contact-box {
-    max-width: 90%;
-    padding: 1.2rem;
-    margin: 1.5rem auto;
+    max-width: 85%;
+    padding: 1.8rem;
+    margin: 2rem auto;
   }
 
   .contact-box .field {
-    padding: .8rem;
-    margin-bottom: 1.5rem;
+    padding: .9rem;
+    margin-bottom: 1.8rem;
+    font-size: 1rem;
   }
 
   .contact-box textarea {
-    height: 7rem;
+    height: 6rem;
   }
 
   .contact-box .btn {
-    width: 9rem;
+    width: 9.5rem;
+    height: 2.8rem;
+    font-size: 1rem;
   }
 
   .book-page.page-right {
@@ -653,6 +669,11 @@ body {
   .book-page.page-right.turn {
     transform: rotateY(-180deg);
   }
+
+  .click-circle {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -661,7 +682,7 @@ body {
   }
 
   .profile-page h1 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     padding: .1rem .2rem;
   }
 
@@ -670,18 +691,13 @@ body {
   }
 
   .skills-content .content span {
-    width: 4.5rem;
-    height: 3.5rem;
+    width: 5rem;
+    height: 3.8rem;
     font-size: .9rem;
   }
 
   .skills-content .content span i {
-    font-size: 1.8rem;
-  }
-
-  .skills-content .ai-tools-list li {
-    font-size: 1rem;
-    margin-right: .8rem;
+    font-size: 2rem;
   }
 
   .contact-box .field {
@@ -690,12 +706,17 @@ body {
   }
 
   .contact-box textarea {
-    height: 6rem;
+    height: 5rem;
   }
 
   .contact-box .btn {
-    width: 8rem;
+    width: 8.5rem;
     height: 2.5rem;
     font-size: .9rem;
+  }
+
+  .click-circle {
+    width: 25px;
+    height: 25px;
   }
 }
