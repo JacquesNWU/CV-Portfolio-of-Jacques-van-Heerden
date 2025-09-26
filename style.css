@@ -275,6 +275,7 @@ body {
   bottom: 1.2rem;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 10;
 }
 
 .nextprev-btn {
@@ -292,6 +293,7 @@ body {
   transition: .5s;
   position: relative;
   overflow: hidden;
+  z-index: 10;
 }
 
 .nextprev-btn:hover {
@@ -460,13 +462,15 @@ body {
 /* Jacques van Heerden (35317906) - Contact Page Styling */
 .contact-box {
   text-align: center;
-  max-width: 75%;
-  margin: 3rem auto;
-  padding: 2.5rem;
+  max-width: 70%;
+  margin: 2.5rem auto;
+  padding: 2rem;
   background: linear-gradient(135deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, .05));
   border-radius: .8rem;
   box-shadow: var(--box-shadow);
   transition: transform .3s ease, box-shadow .3s ease;
+  max-height: 75vh;
+  overflow-y: auto;
 }
 
 .contact-box:hover {
@@ -482,7 +486,7 @@ body {
   padding: 1.2rem;
   font-size: 1.1rem;
   color: var(--text-color);
-  margin-bottom: 2.2rem;
+  margin-bottom: 2rem;
   transition: .3s ease;
 }
 
@@ -523,8 +527,8 @@ body {
 
 .back-profile {
   position: absolute;
-  bottom: 1.2rem;
-  right: 2rem;
+  bottom: 1rem;
+  right: 1.5rem;
   width: 2rem;
   height: 2rem;
   background: transparent;
@@ -538,6 +542,7 @@ body {
   transition: .5s;
   position: relative;
   overflow: hidden;
+  z-index: 10;
 }
 
 .back-profile:hover {
@@ -567,11 +572,12 @@ body {
   position: absolute;
   width: 40px;
   height: 40px;
-  background: radial-gradient(circle, rgba(0, 171, 240, 0.7), rgba(0, 171, 240, 0.2));
+  background: radial-gradient(circle, rgba(0, 171, 240, 0.8), rgba(0, 171, 240, 0.3));
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%) scale(0);
-  animation: clickRipple 1s ease-out forwards;
+  animation: clickRipple 2s ease-out forwards;
+  z-index: 9999;
 }
 
 @keyframes clickRipple {
@@ -579,8 +585,11 @@ body {
     transform: translate(-50%, -50%) scale(0);
     opacity: 1;
   }
+  70% {
+    opacity: 0.7;
+  }
   100% {
-    transform: translate(-50%, -50%) scale(2);
+    transform: translate(-50%, -50%) scale(2.5);
     opacity: 0;
   }
 }
@@ -642,12 +651,13 @@ body {
   .contact-box {
     max-width: 85%;
     padding: 1.8rem;
-    margin: 2rem auto;
+    margin: 1.8rem auto;
+    max-height: 70vh;
   }
 
   .contact-box .field {
     padding: .9rem;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.6rem;
     font-size: 1rem;
   }
 
