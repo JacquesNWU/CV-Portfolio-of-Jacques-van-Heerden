@@ -21,12 +21,14 @@ function createClickCircle(event) {
 /* Jacques van Heerden (35317906) - Add Click Animation to Elements */
 /****************************************************************/
 const interactiveElements = document.querySelectorAll('.btn, .nextprev-btn, .social-media a, .back-profile');
-interactiveElements.forEach(el => {
-    el.addEventListener('click', (event) => {
-        event.preventDefault(); // Prevent default actions if any
-        createClickCircle(event);
+if (interactiveElements.length > 0) {
+    interactiveElements.forEach(el => {
+        el.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent default actions if any
+            createClickCircle(event);
+        });
     });
-});
+}
 
 /****************************************************************/
 /* Jacques van Heerden (35317906) - Page Turning on Click      */
@@ -34,28 +36,30 @@ interactiveElements.forEach(el => {
 const pageTurnBtn = document.querySelectorAll('.nextprev-btn');
 let isAnimating = false; // Prevent rapid clicks
 
-pageTurnBtn.forEach((el, index) => {
-    el.onclick = () => {
-        if (isAnimating) return; // Skip if animation is in progress
-        isAnimating = true;
-        setTimeout(() => { isAnimating = false; }, 600); // Match CSS transition duration
+if (pageTurnBtn.length > 0) {
+    pageTurnBtn.forEach((el, index) => {
+        el.onclick = () => {
+            if (isAnimating) return; // Skip if animation is in progress
+            isAnimating = true;
+            setTimeout(() => { isAnimating = false; }, 600); // Match CSS transition duration
 
-        const pageTurnId = el.getAttribute('data-page');
-        const pageTurn = document.getElementById(pageTurnId);
+            const pageTurnId = el.getAttribute('data-page');
+            const pageTurn = document.getElementById(pageTurnId);
 
-        if (pageTurn.classList.contains('turn')) {
-            pageTurn.classList.remove('turn');
-            setTimeout(() => {
-                pageTurn.style.zIndex = 20 - index;
-            }, 500);
-        } else {
-            pageTurn.classList.add('turn');
-            setTimeout(() => {
-                pageTurn.style.zIndex = 20 + index;
-            }, 500);
-        }
-    };
-});
+            if (pageTurn.classList.contains('turn')) {
+                pageTurn.classList.remove('turn');
+                setTimeout(() => {
+                    pageTurn.style.zIndex = 20 - index;
+                }, 500);
+            } else {
+                pageTurn.classList.add('turn');
+                setTimeout(() => {
+                    pageTurn.style.zIndex = 20 + index;
+                }, 500);
+            }
+        };
+    });
+}
 
 /****************************************************************/
 /* Jacques van Heerden (35317906) - Contact Me Button Action   */
@@ -63,25 +67,27 @@ pageTurnBtn.forEach((el, index) => {
 const pages = document.querySelectorAll('.book-page.page-right');
 const contactMeBtn = document.querySelector('.btn.contact-me');
 
-contactMeBtn.onclick = () => {
-    if (isAnimating) return;
-    isAnimating = true;
-    setTimeout(() => { isAnimating = false; }, pages.length * 300 + 100);
+if (contactMeBtn) {
+    contactMeBtn.onclick = () => {
+        if (isAnimating) return;
+        isAnimating = true;
+        setTimeout(() => { isAnimating = false; }, pages.length * 300 + 100);
 
-    pages.forEach((page, index) => {
-        setTimeout(() => {
-            page.classList.add('turn');
+        pages.forEach((page, index) => {
             setTimeout(() => {
-                page.style.zIndex = 20 + index;
-            }, 500);
-        }, (index + 1) * 200 + 100);
-    });
-};
+                page.classList.add('turn');
+                setTimeout(() => {
+                    page.style.zIndex = 20 + index;
+                }, 500);
+            }, (index + 1) * 200 + 100);
+        });
+    };
+}
 
 /****************************************************************/
 /* Jacques van Heerden (35317906) - Reverse Index Function      */
 /****************************************************************/
-let totalPages = pages.length;
+let totalPages = document.querySelectorAll('.book-page.page-right').length;
 let pageNumber = 0;
 
 function reverseIndex() {
@@ -96,22 +102,24 @@ function reverseIndex() {
 /****************************************************************/
 const backProfileBtn = document.querySelector('.back-profile');
 
-backProfileBtn.onclick = () => {
-    if (isAnimating) return;
-    isAnimating = true;
-    setTimeout(() => { isAnimating = false; }, pages.length * 300 + 100);
+if (backProfileBtn) {
+    backProfileBtn.onclick = () => {
+        if (isAnimating) return;
+        isAnimating = true;
+        setTimeout(() => { isAnimating = false; }, pages.length * 300 + 100);
 
-    pages.forEach((_, index) => {
-        setTimeout(() => {
-            reverseIndex();
-            pages[pageNumber].classList.remove('turn');
+        pages.forEach((_, index) => {
             setTimeout(() => {
                 reverseIndex();
-                pages[pageNumber].style.zIndex = 10 + index;
-            }, 500);
-        }, (index + 1) * 200 + 100);
-    });
-};
+                pages[pageNumber].classList.remove('turn');
+                setTimeout(() => {
+                    reverseIndex();
+                    pages[pageNumber].style.zIndex = 10 + index;
+                }, 500);
+            }, (index + 1) * 200 + 100);
+        });
+    };
+}
 
 /****************************************************************/
 /* Jacques van Heerden (35317906) - Opening Animations Setup    */
@@ -122,31 +130,49 @@ const pageLeft = document.querySelector('.book-page.page-left');
 /****************************************************************/
 /* Jacques van Heerden (35317906) - Animate Cover Right        */
 /****************************************************************/
-setTimeout(() => {
-    coverRight.classList.add('turn');
-}, 2100);
+if (coverRight) {
+    setTimeout(() => {
+        coverRight.classList.add('turn');
+    }, 2100);
 
-setTimeout(() => {
-    coverRight.style.zIndex = -1;
-}, 2800);
+    setTimeout(() => {
+        coverRight.style.zIndex = -1;
+    }, 2800);
+}
 
 /****************************************************************/
 /* Jacques van Heerden (35317906) - Animate Left Profile Page  */
 /****************************************************************/
-setTimeout(() => {
-    pageLeft.style.zIndex = 20;
-}, 3200);
+if (pageLeft) {
+    setTimeout(() => {
+        pageLeft.style.zIndex = 20;
+    }, 3200);
+}
 
 /****************************************************************/
 /* Jacques van Heerden (35317906) - Animate Right Pages Init   */
 /****************************************************************/
-pages.forEach((_, index) => {
-    setTimeout(() => {
-        reverseIndex();
-        pages[pageNumber].classList.remove('turn');
+if (pages.length > 0) {
+    pages.forEach((_, index) => {
         setTimeout(() => {
             reverseIndex();
-            pages[pageNumber].style.zIndex = 10 + index;
-        }, 500);
-    }, (index + 1) * 200 + 2100);
-});
+            pages[pageNumber].classList.remove('turn');
+            setTimeout(() => {
+                reverseIndex();
+                pages[pageNumber].style.zIndex = 10 + index;
+            }, 500);
+        }, (index + 1) * 200 + 2100);
+    });
+}
+
+/****************************************************************/
+/* Jacques van Heerden (35317906) - Contact Form Submission    */
+/****************************************************************/
+const contactForm = document.querySelector('.contact-box form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        console.log('Form submitted:', new FormData(e.target).entries()); // Log data for now
+        // Add your submission logic here (e.g., AJAX call)
+    });
+}
