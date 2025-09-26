@@ -1,201 +1,590 @@
-/* Jacques van Heerden (35317906) - Contact Page Styling */
-.contact-box {
-  text-align: center;
-  max-width: 70%;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, .2), rgba(255, 255, 255, .05));
-  border-radius: .8rem;
-  box-shadow: var(--box-shadow);
-  transition: transform .3s ease, box-shadow .3s ease;
-  max-height: 65vh;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: "Poppins", sans-serif;
 }
 
-.contact-box:hover {
-  transform: translateY(-0.3rem);
-  box-shadow: 0 0 1rem rgba(0, 171, 240, .4);
+:root {
+    --bg-color: #1a1a1a;
+    --main-color: #00abf0;
+    --text-color: #e0e0e0;
+    --second-text-color: #a0a0a0;
+    --white-color: #f5f5f5;
+    --cover-color: linear-gradient(45deg, #2a2a2a, #3a3a3a);
+    --pages-color: linear-gradient(90deg, #2c2c2c, #3c3c3c);
+    --border: .125rem solid #00abf0;
+    --box-shadow: 0 0 .4rem rgba(0, 171, 240, .2);
 }
 
-.contact-box .field {
-  width: 85%;
-  background: rgba(255, 255, 255, .15);
-  border: var(--border);
-  border-radius: .6rem;
-  padding: 1rem;
-  font-size: 1rem;
-  color: var(--text-color);
-  margin-bottom: 1.5rem;
-  transition: .3s ease;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
 }
 
-.contact-box .field:focus {
-  border-color: var(--main-color);
-  background: rgba(255, 255, 255, .25);
-  box-shadow: 0 0 .8rem var(--main-color);
+.wrapper {
+    position: relative;
+    width: 66rem;
+    height: 45rem;
+    padding: 1.5rem;
+    perspective: 250rem;
+    animation: show-animate 2s forwards;
 }
 
-.contact-box .field::placeholder {
-  color: var(--second-text-color);
-  font-weight: 400;
+@keyframes show-animate {
+    0%, 30% { opacity: 0; transform: rotate(-20deg); }
+    100% { opacity: 1; transform: rotate(0deg); }
 }
 
-.contact-box textarea {
-  resize: none;
-  height: 6rem;
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: var(--cover-color);
+    box-shadow: var(--box-shadow);
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    transform-origin: right;
 }
 
-.contact-box .btn {
-  cursor: pointer;
-  width: 10rem;
-  height: 3rem;
-  margin: 1.5rem auto;
-  background: var(--main-color);
-  color: var(--white-color);
-  border-radius: .6rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  transition: transform .3s ease, background .3s ease, color .3s ease;
+.cover.cover-left { z-index: -1; }
+.cover.cover-right { z-index: 100; transition: transform 1s cubic-bezier(.645, .045, .355, 1); }
+.cover.cover-right.turn { transform: rotateY(180deg); }
+
+.book {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    perspective: 250rem;
 }
 
-.contact-box .btn:hover {
-  background: transparent;
-  color: var(--main-color);
-  transform: scale(1.05);
+.book-page {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: var(--pages-color);
+    box-shadow: 0 0 .3rem rgba(0, 0, 0, .1);
+    display: flex;
+    padding: 1.5rem;
 }
 
-/* Jacques van Heerden (35317906) - Page Navigation Arrows */
-.nextprev-btn {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  cursor: pointer;
-  font-size: 2.2rem;
-  color: var(--second-text-color);
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  transition: color .3s ease, transform .3s ease;
-  z-index: 15;
-  background: rgba(255, 255, 255, .1);
-  border: var(--border);
-  border-radius: .3rem;
-}
-
-.nextprev-btn:hover {
-  color: var(--main-color);
-  transform: scale(1.1);
-  background: rgba(255, 255, 255, .2);
-}
-
-.nextprev-btn.back {
-  left: 1rem;
-  right: auto;
-}
-
-/* Ensure book pages have proper padding to accommodate arrows */
 .book-page.page-left {
-  padding: 2rem 1rem 2.5rem 2rem;
+    box-shadow: -.4rem .4rem .4rem rgba(0, 0, 0, .1);
+}
+
+.profile-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.profile-page img {
+    max-width: 140px;
+    border-radius: 50%;
+    border: .2rem solid var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.profile-page h1 {
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: .5rem;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profile-page h3 {
+    font-size: 1.2rem;
+    color: var(--main-color);
+    margin-bottom: .8rem;
+}
+
+.profile-page .social-media {
+    margin: .6rem 0 .8rem;
+}
+
+.profile-page .social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: var(--border);
+    border-radius: 50%;
+    font-size: 1.1rem;
+    color: var(--main-color);
+    margin: 0 .3rem;
+    transition: .3s;
+}
+
+.profile-page .social-media a:hover {
+    background: var(--main-color);
+    color: var(--white-color);
+}
+
+.profile-page p {
+    text-align: center;
+    font-size: .9rem;
+    line-height: 1.4;
+    max-width: 80%;
+}
+
+.profile-page .btn-box {
+    margin-top: 1.2rem;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 2.5rem;
+    background: var(--main-color);
+    border: var(--border);
+    border-radius: .3rem;
+    font-size: .9rem;
+    color: var(--white-color);
+    font-weight: 500;
+    margin: 0 .8rem;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--main-color);
+}
+
+.btn-box .btn:nth-child(2) {
+    background: transparent;
+    color: var(--main-color);
+}
+
+.btn-box .btn:nth-child(2):hover {
+    background: var(--main-color);
+    color: var(--white-color);
 }
 
 .book-page.page-right {
-  padding: 2rem 2.5rem 2.5rem 1rem;
-  transition: transform 0.8s cubic-bezier(.645, .045, .355, 1);
+    position: absolute;
+    right: 0;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: transform .7s ease-in-out;
 }
 
-/* Responsive Design Adjustments */
-@media (max-width: 768px) {
-  .contact-box {
-    max-width: 85%;
-    padding: 1.8rem;
-    margin: 1.5rem auto;
-    max-height: 60vh;
-  }
+.book-page.page-right.turn {
+    transform: rotateY(-180deg);
+}
 
-  .contact-box .field {
-    width: 90%;
-    padding: .9rem;
+.book-page .page-front,
+.book-page .page-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--pages-color);
+    padding: 1.2rem 1.5rem;
+}
+
+.book-page .page-front {
+    transform: rotateY(0deg) translateZ(1px);
+}
+
+.book-page .page-back {
+    transform: rotateY(180deg) translateZ(1px);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.workeduc-box {
+    border-left: var(--border);
+}
+
+.workeduc-box .workeduc-content {
+    position: relative;
+    padding-left: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.workeduc-box .workeduc-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -.55rem;
+    width: 1rem;
+    height: 1rem;
+    background: var(--main-color);
+    border-radius: 50%;
+}
+
+.workeduc-content .year {
+    color: var(--main-color);
+    font-size: .9rem;
+}
+
+.workeduc-content .year i {
+    margin-right: .3rem;
+}
+
+.workeduc-content h3 {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.workeduc-content p {
+    font-size: .85rem;
+    line-height: 1.3;
+}
+
+.number-page {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: .9rem;
+    color: var(--second-text-color);
+}
+
+.nextprev-btn {
+    position: absolute;
+    bottom: .8rem;
+    right: 1.2rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: var(--second-text-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.nextprev-btn:hover {
+    color: var(--main-color);
+}
+
+.nextprev-btn.back {
+    left: 1.2rem;
+}
+
+.skills-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 1.2rem;
+}
+
+.skills-box .skills-content {
+    padding: 1.2rem;
+    border: var(--border);
+    border-radius: .4rem;
+    transition: .3s ease;
+}
+
+.skills-box .skills-content:hover {
+    box-shadow: var(--box-shadow);
+}
+
+.skills-content h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.skills-content .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.skills-content .content span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 3.5rem;
+    border: var(--border);
+    border-radius: .3rem;
+    font-size: .9rem;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: .3s ease;
+    padding: .5rem;
+}
+
+.skills-content .content span:hover {
+    box-shadow: var(--box-shadow);
+    transform: translateY(-0.15rem);
+}
+
+.portfolio-box .img-box {
+    width: 100%;
+    height: 12rem;
+    border: var(--border);
+    border-radius: .4rem;
+    overflow: hidden;
+}
+
+.portfolio-box .img-box img {
+    width: 100%;
+    object-fit: cover;
+    transition: .5s ease;
+}
+
+.portfolio-box .img-box:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-box .info-box {
+    margin: 1rem 0 1.2rem;
+}
+
+.portfolio-box .info-box .info-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .8rem;
+}
+
+.portfolio-box .info-box .info-title h3 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.portfolio-box .info-box .info-title a {
+    color: var(--main-color);
+    font-size: .9rem;
+}
+
+.portfolio-box .info-box p {
+    font-size: .85rem;
+    line-height: 1.3;
+}
+
+.portfolio-box .btn-box {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.contact-box {
+    text-align: center;
+    max-width: 80%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .05));
+    border-radius: .6rem;
+    box-shadow: var(--box-shadow);
+    transition: .3s ease;
+}
+
+.contact-box:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0 .6rem rgba(0, 171, 240, .3);
+}
+
+.contact-box .field {
+    width: 100%;
+    background: rgba(255, 255, 255, .08);
+    border: var(--border);
+    border-radius: .4rem;
+    padding: .8rem;
+    font-size: .9rem;
+    color: var(--text-color);
     margin-bottom: 1.2rem;
-  }
+}
 
-  .contact-box textarea {
-    height: 5.5rem;
-  }
+.contact-box .field:focus {
+    border-color: var(--main-color);
+    background: rgba(255, 255, 255, .15);
+}
 
-  .contact-box .btn {
-    width: 9.5rem;
+.contact-box .field::placeholder {
+    color: var(--second-text-color);
+}
+
+.contact-box textarea {
+    resize: none;
+    height: 6rem;
+}
+
+.contact-box .btn {
+    width: 9rem;
     height: 2.8rem;
-    font-size: 1rem;
-  }
+    font-size: .9rem;
+    cursor: pointer;
+}
 
-  .nextprev-btn {
-    width: 2.2rem;
-    height: 2.2rem;
-    font-size: 2rem;
-    bottom: 0.8rem;
-    right: 0.8rem;
-  }
+.back-profile {
+    position: absolute;
+    bottom: .8rem;
+    right: 1.2rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    background: transparent;
+    border: var(--border);
+    border-radius: .3rem;
+    font-size: .9rem;
+    color: var(--main-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
 
-  .nextprev-btn.back {
-    left: 0.8rem;
-  }
+.back-profile:hover {
+    background: var(--main-color);
+    color: var(--white-color);
+}
 
-  .book-page.page-left {
-    padding: 1.5rem 0.8rem 2rem 1.5rem;
-  }
+.back-profile p {
+    position: absolute;
+    top: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%) scale(.5);
+    font-size: .9rem;
+    color: var(--main-color);
+    opacity: 0;
+    transition: .3s;
+}
 
-  .book-page.page-right {
-    padding: 1.5rem 2rem 2rem 0.8rem;
-  }
+.back-profile:hover p {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+.click-circle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, rgba(0, 171, 240, 0.7), rgba(0, 171, 240, 0.2));
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0);
+    animation: clickRipple 1.5s ease-out forwards;
+    z-index: 9999;
+}
+
+@keyframes clickRipple {
+    0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .book-page {
+        padding: 1rem;
+    }
+
+    .profile-page {
+        max-width: 95%;
+    }
+
+    .profile-page h1 {
+        font-size: 1.8rem;
+    }
+
+    .profile-page h3 {
+        font-size: 1.1rem;
+    }
+
+    .profile-page img {
+        max-width: 120px;
+    }
+
+    .skills-box {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .skills-content .content span {
+        width: 4.5rem;
+        height: 3rem;
+        font-size: .85rem;
+    }
+
+    .contact-box {
+        max-width: 90%;
+        padding: 1.2rem;
+    }
+
+    .contact-box .field {
+        padding: .7rem;
+        font-size: .85rem;
+    }
+
+    .contact-box textarea {
+        height: 5rem;
+    }
+
+    .contact-box .btn {
+        width: 8rem;
+        height: 2.5rem;
+        font-size: .85rem;
+    }
 }
 
 @media (max-width: 480px) {
-  .contact-box {
-    max-width: 90%;
-    padding: 1.5rem;
-    margin: 1rem auto;
-    max-height: 55vh;
-  }
+    .profile-page h1 {
+        font-size: 1.6rem;
+    }
 
-  .contact-box .field {
-    width: 95%;
-    padding: .7rem;
-    font-size: .9rem;
-    margin-bottom: 1rem;
-  }
+    .profile-page h3 {
+        font-size: 1rem;
+    }
 
-  .contact-box textarea {
-    height: 5rem;
-  }
+    .profile-page img {
+        max-width: 100px;
+    }
 
-  .contact-box .btn {
-    width: 8.5rem;
-    height: 2.5rem;
-    font-size: .9rem;
-  }
+    .skills-content .content span {
+        width: 4rem;
+        height: 2.8rem;
+        font-size: .8rem;
+    }
 
-  .nextprev-btn {
-    width: 2rem;
-    height: 2rem;
-    font-size: 1.8rem;
-    bottom: 0.5rem;
-    right: 0.5rem;
-  }
+    .contact-box .field {
+        font-size: .8rem;
+        padding: .6rem;
+    }
 
-  .nextprev-btn.back {
-    left: 0.5rem;
-  }
-
-  .book-page.page-left {
-    padding: 1.2rem 0.5rem 1.5rem 1.2rem;
-  }
-
-  .book-page.page-right {
-    padding: 1.2rem 1.5rem 1.5rem 0.5rem;
-  }
+    .contact-box .btn {
+        width: 7.5rem;
+        height: 2.3rem;
+        font-size: .8rem;
+    }
 }
