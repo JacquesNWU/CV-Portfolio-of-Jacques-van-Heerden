@@ -171,8 +171,8 @@ if (pages.length > 0) {
 const contactForm = document.querySelector('.contact-box form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        console.log('Form submitted:', new FormData(e.target).entries()); // Log data for now
-        // Add your submission logic here (e.g., AJAX call)
+        e.preventDefault(); // Prevent default to allow custom handling if needed
+        // Formspree will handle the submission due to action attribute
+        contactForm.submit(); // Trigger the form submission to Formspree
     });
 }
