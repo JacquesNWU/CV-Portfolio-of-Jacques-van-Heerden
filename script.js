@@ -1,4 +1,31 @@
 /****************************************************************/
+/* Jacques van Heerden (35317906) - Click Animation Function   */
+/****************************************************************/
+function createClickCircle(event) {
+    const circle = document.createElement('div');
+    circle.classList.add('click-circle');
+    document.body.appendChild(circle);
+
+    const x = event.clientX;
+    const y = event.clientY;
+
+    circle.style.left = `${x}px`;
+    circle.style.top = `${y}px`;
+
+    setTimeout(() => {
+        circle.remove();
+    }, 1000);
+}
+
+/****************************************************************/
+/* Jacques van Heerden (35317906) - Add Click Animation to Elements */
+/****************************************************************/
+const interactiveElements = document.querySelectorAll('.btn, .nextprev-btn, .social-media a, .back-profile');
+interactiveElements.forEach(el => {
+    el.addEventListener('click', createClickCircle);
+});
+
+/****************************************************************/
 /* Jacques van Heerden (35317906) - Page Turning on Click      */
 /****************************************************************/
 const pageTurnBtn = document.querySelectorAll('.nextprev-btn');
