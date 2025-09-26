@@ -1,14 +1,14 @@
 /* Jacques van Heerden (35317906) - Contact Page Styling */
 .contact-box {
   text-align: center;
-  max-width: 80%; /* Slightly wider for better proportionality */
-  margin: 3rem auto; /* Increased margin for better centering */
-  padding: 2.5rem; /* Consistent padding for breathing room */
+  max-width: 70%; /* Reduced to fit within book page width */
+  margin: 2rem auto; /* Adjusted margin for book padding */
+  padding: 2rem; /* Consistent padding */
   background: linear-gradient(135deg, rgba(255, 255, 255, .2), rgba(255, 255, 255, .05));
   border-radius: .8rem;
   box-shadow: var(--box-shadow);
   transition: transform .3s ease, box-shadow .3s ease;
-  max-height: 80vh; /* Slightly taller to fit content comfortably */
+  max-height: 65vh; /* Reduced to fit within page height */
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -17,18 +17,18 @@
 
 .contact-box:hover {
   transform: translateY(-0.3rem);
-  box-shadow: 0 0 1rem rgba(0, 171, 240, .4); /* Slightly stronger shadow on hover */
+  box-shadow: 0 0 1rem rgba(0, 171, 240, .4);
 }
 
 .contact-box .field {
-  width: 90%; /* Reduced width for better alignment within box */
-  background: rgba(255, 255, 255, .15); /* Slightly more opaque for contrast */
+  width: 85%; /* Reduced width to fit comfortably */
+  background: rgba(255, 255, 255, .15);
   border: var(--border);
   border-radius: .6rem;
-  padding: 1.3rem; /* Slightly more padding for comfort */
-  font-size: 1.1rem;
+  padding: 1rem;
+  font-size: 1rem;
   color: var(--text-color);
-  margin-bottom: 1.8rem; /* Reduced spacing for tighter layout */
+  margin-bottom: 1.5rem;
   transition: .3s ease;
 }
 
@@ -45,18 +45,18 @@
 
 .contact-box textarea {
   resize: none;
-  height: 8rem; /* Slightly taller for better usability */
+  height: 6rem; /* Reduced height to fit */
 }
 
 .contact-box .btn {
   cursor: pointer;
-  width: 12rem; /* Slightly wider button for prominence */
-  height: 3.5rem; /* Taller for better clickability */
-  margin: 2rem auto; /* More margin for spacing */
+  width: 10rem;
+  height: 3rem;
+  margin: 1.5rem auto;
   background: var(--main-color);
   color: var(--white-color);
   border-radius: .6rem;
-  font-size: 1.2rem; /* Slightly larger text */
+  font-size: 1.1rem;
   font-weight: 600;
   transition: transform .3s ease, background .3s ease, color .3s ease;
 }
@@ -70,126 +70,132 @@
 /* Jacques van Heerden (35317906) - Page Navigation Arrows */
 .nextprev-btn {
   position: absolute;
-  bottom: 1.5rem; /* Moved slightly lower for better spacing */
-  right: 2rem; /* Consistent right padding */
-  width: 2.5rem; /* Slightly larger for visibility */
+  bottom: 1rem; /* Aligned to bottom */
+  right: 1rem; /* Moved to bottom right of right page */
+  width: 2.5rem;
   height: 2.5rem;
   cursor: pointer;
-  font-size: 2.2rem; /* Slightly larger icon */
+  font-size: 2.2rem;
   color: var(--second-text-color);
   display: inline-flex;
   justify-content: center;
   align-items: center;
   transition: color .3s ease, transform .3s ease;
-  z-index: 15; /* Higher z-index to avoid overlap */
-  background: rgba(255, 255, 255, .1); /* Subtle background for contrast */
+  z-index: 15;
+  background: rgba(255, 255, 255, .1);
   border: var(--border);
   border-radius: .3rem;
 }
 
 .nextprev-btn:hover {
   color: var(--main-color);
-  transform: scale(1.1); /* Subtle scale on hover */
+  transform: scale(1.1);
   background: rgba(255, 255, 255, .2);
 }
 
 .nextprev-btn.back {
-  left: 2rem; /* Consistent left padding */
+  left: 1rem; /* Moved to bottom left of left page */
   right: auto;
 }
 
-/* Ensure book pages have proper padding to avoid arrow overlap */
+/* Ensure book pages have proper padding to accommodate arrows */
+.book-page.page-left {
+  padding: 2rem 1rem 2.5rem 2rem; /* Adjusted padding for bottom left arrow */
+}
+
 .book-page.page-right {
-  padding: 2rem 3rem; /* Increased right padding to avoid arrow overlap */
+  padding: 2rem 2.5rem 2.5rem 1rem; /* Adjusted padding for bottom right arrow */
   transition: transform 0.8s cubic-bezier(.645, .045, .355, 1);
 }
 
 /* Responsive Design Adjustments */
 @media (max-width: 768px) {
-  .wrapper {
-    width: 100%;
-    height: auto;
-    padding: 1.5rem;
-  }
-
-  .book-page {
-    padding: 1.5rem 2.5rem; /* Adjusted padding for arrows */
-  }
-
   .contact-box {
-    max-width: 90%;
-    padding: 2rem;
-    margin: 2rem auto;
-    max-height: 75vh;
+    max-width: 85%;
+    padding: 1.8rem;
+    margin: 1.5rem auto;
+    max-height: 60vh;
   }
 
   .contact-box .field {
-    width: 95%;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    font-size: 1rem;
+    width: 90%;
+    padding: .9rem;
+    margin-bottom: 1.2rem;
   }
 
   .contact-box textarea {
-    height: 7rem;
+    height: 5.5rem;
   }
 
   .contact-box .btn {
-    width: 10rem;
-    height: 3rem;
-    font-size: 1.1rem;
+    width: 9.5rem;
+    height: 2.8rem;
+    font-size: 1rem;
   }
 
   .nextprev-btn {
     width: 2.2rem;
     height: 2.2rem;
     font-size: 2rem;
-    bottom: 1.2rem;
-    right: 1.5rem;
+    bottom: 0.8rem;
+    right: 0.8rem;
   }
 
   .nextprev-btn.back {
-    left: 1.5rem;
+    left: 0.8rem;
+  }
+
+  .book-page.page-left {
+    padding: 1.5rem 0.8rem 2rem 1.5rem;
+  }
+
+  .book-page.page-right {
+    padding: 1.5rem 2rem 2rem 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
   .contact-box {
-    max-width: 95%;
+    max-width: 90%;
     padding: 1.5rem;
-    margin: 1.5rem auto;
+    margin: 1rem auto;
+    max-height: 55vh;
   }
 
   .contact-box .field {
-    width: 100%;
-    padding: .8rem;
+    width: 95%;
+    padding: .7rem;
     font-size: .9rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
   }
 
   .contact-box textarea {
-    height: 6rem;
+    height: 5rem;
   }
 
   .contact-box .btn {
-    width: 9rem;
-    height: 2.8rem;
-    font-size: 1rem;
+    width: 8.5rem;
+    height: 2.5rem;
+    font-size: .9rem;
   }
 
   .nextprev-btn {
     width: 2rem;
     height: 2rem;
     font-size: 1.8rem;
-    bottom: 1rem;
-    right: 1.2rem;
+    bottom: 0.5rem;
+    right: 0.5rem;
   }
 
   .nextprev-btn.back {
-    left: 1.2rem;
+    left: 0.5rem;
+  }
+
+  .book-page.page-left {
+    padding: 1.2rem 0.5rem 1.5rem 1.2rem;
   }
 
   .book-page.page-right {
-    padding: 1.2rem 2rem;
+    padding: 1.2rem 1.5rem 1.5rem 0.5rem;
   }
 }
