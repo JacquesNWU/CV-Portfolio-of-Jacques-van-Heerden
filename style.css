@@ -508,14 +508,14 @@ body {
 .contact-box {
   text-align: center;
   max-width: 70%;
-  margin: 1.5rem auto 4rem auto;
-  padding: 2rem;
+  margin: 1rem auto 5rem auto;
+  padding: 1.5rem;
   background: rgba(0, 171, 240, 0.08);
   border: var(--border);
   border-radius: .8rem;
   box-shadow: var(--box-shadow);
   transition: transform .3s ease, box-shadow .3s ease;
-  max-height: 65vh;
+  max-height: 55vh;
   overflow-y: auto;
 }
 
@@ -529,10 +529,10 @@ body {
   background: rgba(0, 171, 240, 0.05);
   border: var(--border);
   border-radius: .6rem;
-  padding: 1.2rem;
-  font-size: 1.1rem;
+  padding: .9rem;
+  font-size: 1rem;
   color: var(--text-color);
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
   transition: .3s ease;
 }
 
@@ -549,18 +549,18 @@ body {
 
 .contact-box textarea {
   resize: none;
-  height: 7rem;
+  height: 5rem;
 }
 
 .contact-box .btn {
   cursor: pointer;
-  width: 11rem;
-  height: 3.2rem;
-  margin: 1.5rem auto;
+  width: 10rem;
+  height: 2.8rem;
+  margin: 1rem auto;
   background: var(--main-color);
   color: var(--white-color);
   border-radius: .6rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   transition: .3s ease;
 }
@@ -705,9 +705,9 @@ body {
 
   .contact-box {
     max-width: 85%;
-    padding: 1.8rem;
-    margin: 1.8rem auto;
-    max-height: 70vh;
+    padding: 1.5rem;
+    margin: 1rem auto 3.5rem auto;
+    max-height: 60vh;
   }
 
   .contact-box .field {
