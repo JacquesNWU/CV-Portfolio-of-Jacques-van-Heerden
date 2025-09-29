@@ -632,201 +632,213 @@ body {
   .wrapper {
     width: 100%;
     height: auto;
-    min-height: 100vh;
     padding: 1rem;
   }
 
   .book-page {
     padding: 1rem;
-    min-height: 600px;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
   }
 
   .page-front,
   .page-back {
-    padding-bottom: 80px !important;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
   }
 
   .profile-page {
     max-width: 95%;
-    padding-bottom: 100px;
-  }
-
-  .profile-page h1, .profile-page h2 {
-    font-size: 1.6rem;
-    padding: .15rem .3rem;
-  }
-
-  .profile-page h3 {
-    font-size: 1.1rem;
-  }
-
-  .profile-page img {
-    max-width: 120px;
-  }
-
-  .profile-page p {
-    font-size: .85rem;
-    margin-bottom: 1rem;
-  }
-
-  .profile-page .btn-box {
-    position: absolute;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    width: auto;
     align-items: center;
   }
 
+  .profile-page h1, .profile-page h2 {
+    font-size: 1.5rem;
+    padding: .1rem .2rem;
+  }
+
+  .profile-page h3 {
+    font-size: 1rem;
+  }
+
+  .profile-page img {
+    max-width: 110px;
+  }
+
+  .profile-page p {
+    font-size: .8rem;
+    margin: .8rem 0;
+  }
+
+  .profile-page .btn-box {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    width: 100%;
+    align-items: center;
+    margin: 1.2rem 0 3rem 0;
+  }
+
   .profile-page .btn-box .btn {
-    width: 13rem;
-    height: 3rem;
-    font-size: .95rem;
+    width: 12rem;
+    height: 2.8rem;
+    font-size: .9rem;
     margin: 0;
   }
 
   .title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    margin-bottom: .8rem;
   }
 
   .workeduc-box {
-    padding-bottom: 80px;
+    margin-bottom: 3rem;
   }
 
-  .services-box {
-    gap: .7rem;
-    padding-bottom: 80px;
+  .workeduc-content {
+    margin-bottom: .8rem;
   }
 
-  .services-box .services-content {
-    flex: 1 1 calc(50% - .35rem);
-    padding: .4rem .3rem .5rem;
-  }
-
-  .services-content h3 {
-    font-size: .75rem;
-    line-height: 1.2;
-  }
-
-  .skills-box-compact {
-    gap: .35rem;
-    padding: 0 .3rem 80px .3rem;
-  }
-
-  .skills-box-compact span {
-    width: 2.8rem;
-    height: 2.3rem;
-    font-size: .58rem;
-  }
-
-  .skills-box-compact span i {
+  .workeduc-content h3 {
     font-size: .95rem;
   }
 
-  .portfolio-box {
-    padding-bottom: 80px;
-  }
-
-  .portfolio-box .img-box {
-    height: 10rem;
-  }
-
-  .portfolio-box .info-box {
-    margin: .8rem 0 1rem;
-  }
-
-  .portfolio-box .info-box .info-title h3 {
-    font-size: 1rem;
-  }
-
-  .portfolio-box .info-box p {
+  .workeduc-content p {
     font-size: .75rem;
   }
 
+  .services-box {
+    gap: .6rem;
+    margin-bottom: 3rem;
+  }
+
+  .services-box .services-content {
+    flex: 1 1 calc(50% - .3rem);
+    padding: .4rem .2rem;
+  }
+
+  .services-content h3 {
+    font-size: .7rem;
+    line-height: 1.1;
+  }
+
+  .skills-box-compact {
+    gap: .3rem;
+    padding: 0 .2rem;
+    margin-bottom: 3rem;
+  }
+
+  .skills-box-compact span {
+    width: 2.6rem;
+    height: 2.2rem;
+    font-size: .55rem;
+    padding: .15rem;
+  }
+
+  .skills-box-compact span i {
+    font-size: .9rem;
+    margin-bottom: .1rem;
+  }
+
+  .portfolio-box {
+    margin-bottom: 3rem;
+  }
+
+  .portfolio-box .img-box {
+    height: 9rem;
+  }
+
+  .portfolio-box .info-box {
+    margin: .6rem 0 .8rem;
+  }
+
+  .portfolio-box .info-box .info-title h3 {
+    font-size: .95rem;
+  }
+
+  .portfolio-box .info-box p {
+    font-size: .7rem;
+  }
+
   .portfolio-box .btn-box {
-    position: absolute;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: .8rem;
-    margin: 0;
+    gap: .7rem;
+    margin: 1rem 0 3rem 0;
   }
 
   .portfolio-box .btn-box .btn {
-    width: 10rem;
-    height: 2.8rem;
-    font-size: .85rem;
+    width: 9.5rem;
+    height: 2.6rem;
+    font-size: .8rem;
     margin: 0;
   }
 
   .contact-box {
-    max-width: 90%;
-    padding: 1rem;
-    margin: .8rem auto 90px auto;
-    max-height: 48vh;
+    max-width: 88%;
+    padding: .9rem;
+    margin: .6rem auto 3rem auto;
+    max-height: 45vh;
   }
 
   .contact-box .field {
-    padding: .65rem;
-    margin-bottom: .9rem;
-    font-size: .85rem;
+    padding: .6rem;
+    margin-bottom: .8rem;
+    font-size: .8rem;
   }
 
   .contact-box textarea {
-    height: 4rem;
+    height: 3.5rem;
   }
 
   .contact-box .btn {
-    width: 8.5rem;
-    height: 2.5rem;
-    font-size: .85rem;
-    margin: .8rem auto;
+    width: 8rem;
+    height: 2.4rem;
+    font-size: .8rem;
+    margin: .6rem auto;
   }
 
   .nextprev-btn {
-    position: fixed !important;
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: 1.8rem;
-    bottom: 15px !important;
-    z-index: 999 !important;
+    position: absolute;
+    width: 2.3rem;
+    height: 2.3rem;
+    font-size: 1.6rem;
+    bottom: 10px;
+    z-index: 100;
   }
 
   .nextprev-btn.back {
-    left: 15px !important;
+    left: 10px;
   }
 
   .nextprev-btn.next-btn {
-    right: 15px !important;
+    right: 10px;
   }
 
   .number-page {
-    position: fixed !important;
-    bottom: 20px !important;
-    z-index: 999 !important;
-    font-size: .9rem;
+    position: absolute;
+    bottom: 15px;
+    z-index: 100;
+    font-size: .85rem;
   }
 
   .back-profile {
-    position: fixed !important;
-    width: 2.5rem;
-    height: 2.5rem;
-    bottom: 15px !important;
-    right: 15px !important;
-    z-index: 999 !important;
+    position: absolute;
+    width: 2.3rem;
+    height: 2.3rem;
+    bottom: 10px;
+    right: 10px;
+    z-index: 100;
   }
 
   .click-circle {
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
   }
 }
 
