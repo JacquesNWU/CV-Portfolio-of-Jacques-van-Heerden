@@ -1,3 +1,6 @@
+/****************************************************************/
+/* Jacques van Heerden (35317906) - Click Animation Function   */
+/****************************************************************/
 function createClickCircle(event) {
     const circle = document.createElement('div');
     circle.classList.add('click-circle');
@@ -9,9 +12,14 @@ function createClickCircle(event) {
     circle.style.left = `${x}px`;
     circle.style.top = `${y}px`;
 
-    setTimeout(() => circle.remove(), 1500);
+    setTimeout(() => {
+        circle.remove();
+    }, 2000); // Match 2-second animation duration
 }
 
+/****************************************************************/
+/* Jacques van Heerden (35317906) - Add Click Animation to Elements */
+/****************************************************************/
 const interactiveElements = document.querySelectorAll('.btn, .nextprev-btn, .social-media a, .back-profile');
 interactiveElements.forEach(el => {
     el.addEventListener('click', (event) => {
@@ -19,14 +27,17 @@ interactiveElements.forEach(el => {
     });
 });
 
+/****************************************************************/
+/* Jacques van Heerden (35317906) - Page Turning on Click      */
+/****************************************************************/
 const pageTurnBtn = document.querySelectorAll('.nextprev-btn');
-let isAnimating = false;
+let isAnimating = false; // Prevent rapid clicks
 
 pageTurnBtn.forEach((el, index) => {
     el.onclick = () => {
-        if (isAnimating) return;
+        if (isAnimating) return; // Skip if animation is in progress
         isAnimating = true;
-        setTimeout(() => { isAnimating = false; }, 700);
+        setTimeout(() => { isAnimating = false; }, 600); // Match CSS transition duration
 
         const pageTurnId = el.getAttribute('data-page');
         const pageTurn = document.getElementById(pageTurnId);
@@ -45,6 +56,9 @@ pageTurnBtn.forEach((el, index) => {
     };
 });
 
+/****************************************************************/
+/* Jacques van Heerden (35317906) - Contact Me Button Action   */
+/****************************************************************/
 const pages = document.querySelectorAll('.book-page.page-right');
 const contactMeBtn = document.querySelector('.btn.contact-me');
 
@@ -63,6 +77,9 @@ contactMeBtn.onclick = () => {
     });
 };
 
+/****************************************************************/
+/* Jacques van Heerden (35317906) - Reverse Index Function      */
+/****************************************************************/
 let totalPages = pages.length;
 let pageNumber = 0;
 
@@ -73,6 +90,9 @@ function reverseIndex() {
     }
 }
 
+/****************************************************************/
+/* Jacques van Heerden (35317906) - Back to Profile Button      */
+/****************************************************************/
 const backProfileBtn = document.querySelector('.back-profile');
 
 backProfileBtn.onclick = () => {
@@ -92,9 +112,15 @@ backProfileBtn.onclick = () => {
     });
 };
 
+/****************************************************************/
+/* Jacques van Heerden (35317906) - Opening Animations Setup    */
+/****************************************************************/
 const coverRight = document.querySelector('.cover.cover-right');
 const pageLeft = document.querySelector('.book-page.page-left');
 
+/****************************************************************/
+/* Jacques van Heerden (35317906) - Animate Cover Right        */
+/****************************************************************/
 setTimeout(() => {
     coverRight.classList.add('turn');
 }, 2100);
@@ -103,10 +129,16 @@ setTimeout(() => {
     coverRight.style.zIndex = -1;
 }, 2800);
 
+/****************************************************************/
+/* Jacques van Heerden (35317906) - Animate Left Profile Page  */
+/****************************************************************/
 setTimeout(() => {
     pageLeft.style.zIndex = 20;
 }, 3200);
 
+/****************************************************************/
+/* Jacques van Heerden (35317906) - Animate Right Pages Init   */
+/****************************************************************/
 pages.forEach((_, index) => {
     setTimeout(() => {
         reverseIndex();
@@ -116,22 +148,4 @@ pages.forEach((_, index) => {
             pages[pageNumber].style.zIndex = 10 + index;
         }, 500);
     }, (index + 1) * 200 + 2100);
-});
-
-// Contact form submission
-const contactFormBtn = document.querySelector('.contact-box .btn');
-contactFormBtn.addEventListener('click', (event) => {
-    event.preventDefault();
-    const name = document.querySelector('.contact-box input[type="text"]').value;
-    const email = document.querySelector('.contact-box input[type="email"]').value;
-    const message = document.querySelector('.contact-box textarea').value;
-
-    if (name && email && message) {
-        alert('Message sent successfully!'); // Placeholder for actual form submission
-        document.querySelector('.contact-box input[type="text"]').value = '';
-        document.querySelector('.contact-box input[type="email"]').value = '';
-        document.querySelector('.contact-box textarea').value = '';
-    } else {
-        alert('Please fill in all fields.');
-    }
 });
