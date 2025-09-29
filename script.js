@@ -4,6 +4,17 @@
 const isMobile = () => window.innerWidth <= 768;
 
 /****************************************************************/
+/* Jacques van Heerden (35317906) - Prevent Initial Flash      */
+/****************************************************************/
+// Hide desktop elements immediately on mobile
+if (isMobile()) {
+    document.addEventListener('DOMContentLoaded', () => {
+        const cover = document.querySelectorAll('.cover');
+        cover.forEach(el => el.style.display = 'none');
+    });
+}
+
+/****************************************************************/
 /* Jacques van Heerden (35317906) - Click/Touch Animation      */
 /****************************************************************/
 function createClickCircle(event) {
@@ -83,11 +94,7 @@ const contactMeBtn = document.querySelector('.btn.contact-me');
 
 const handleContactMe = () => {
     if (isMobile()) {
-        // On mobile, just scroll to contact section
-        const contactSection = document.getElementById('turn-3');
-        if (contactSection) {
-            contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        // On mobile, do nothing - pages are already visible in scroll view
         return;
     }
 
@@ -131,8 +138,7 @@ const backProfileBtn = document.querySelector('.back-profile');
 
 const handleBackProfile = () => {
     if (isMobile()) {
-        // On mobile, scroll to top
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // On mobile, do nothing - user can scroll naturally
         return;
     }
 
@@ -164,23 +170,32 @@ if (backProfileBtn) {
 /* Jacques van Heerden (35317906) - Desktop Opening Animations */
 /****************************************************************/
 function initDesktopAnimations() {
-    if (isMobile()) return;
+    if (isMobile()) {
+        // On mobile, ensure everything is visible and properly laid out
+        const pages = document.querySelectorAll('.book-page.page-right');
+        pages.forEach(page => {
+            page.classList.remove('turn');
+            page.style.zIndex = 'auto';
+        });
+        return;
+    }
 
     const coverRight = document.querySelector('.cover.cover-right');
     const pageLeft = document.querySelector('.book-page.page-left');
 
     setTimeout(() => {
-        coverRight.classList.add('turn');
+        if (coverRight) coverRight.classList.add('turn');
     }, 2100);
 
     setTimeout(() => {
-        coverRight.style.zIndex = -1;
+        if (coverRight) coverRight.style.zIndex = -1;
     }, 2800);
 
     setTimeout(() => {
-        pageLeft.style.zIndex = 20;
+        if (pageLeft) pageLeft.style.zIndex = 20;
     }, 3200);
 
+    const pages = document.querySelectorAll('.book-page.page-right');
     pages.forEach((_, index) => {
         setTimeout(() => {
             reverseIndex();
@@ -194,38 +209,41 @@ function initDesktopAnimations() {
 }
 
 // Initialize animations on load
-initDesktopAnimations();
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initDesktopAnimations);
+} else {
+    initDesktopAnimations();
+}
 
 /****************************************************************/
 /* Jacques van Heerden (35317906) - Handle Window Resize       */
 /****************************************************************/
 let resizeTimer;
+let lastWidth = window.innerWidth;
+
 window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
-        // Reset animations if switching between mobile and desktop
-        if (!isMobile()) {
-            initDesktopAnimations();
-        }
-    }, 250);
-});
-
-/****************************************************************/
-/* Jacques van Heerden (35317906) - Smooth Scroll for Links    */
-/****************************************************************/
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href !== '#' && href !== '#profile' && href.startsWith('#turn')) {
-            if (isMobile()) {
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+        const currentWidth = window.innerWidth;
+        const wasDesktop = lastWidth > 768;
+        const isNowDesktop = currentWidth > 768;
+        
+        // Only reinitialize if switching between mobile and desktop
+        if (wasDesktop !== isNowDesktop) {
+            if (isNowDesktop) {
+                // Switching to desktop - reload to get proper animation
+                location.reload();
+            } else {
+                // Switching to mobile - reset all transforms
+                const pages = document.querySelectorAll('.book-page.page-right');
+                pages.forEach(page => {
+                    page.classList.remove('turn');
+                    page.style.zIndex = 'auto';
+                });
             }
         }
-    });
+        lastWidth = currentWidth;
+    }, 250);
 });
 
 /****************************************************************/
