@@ -624,6 +624,8 @@ body {
   }
 }
 
+/* @media (max-width: 768px) is now closed here for standard CSS */
+
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
