@@ -625,215 +625,191 @@ body {
 }
 
 @media (max-width: 768px) {
-  .btn {
-    display: block;
-    text-align: center;
-  }
-
-  .profile-page .btn-box .btn,
-  .portfolio-box .btn-box .btn {
-    display: block !important;
-  }
-
   .wrapper {
     width: 100%;
     height: auto;
-    padding: .5rem;
+    padding: 0;
+    perspective: none;
+    animation: none;
+  }
+
+  .cover {
+    display: none;
+  }
+
+  .book {
+    display: block;
+    perspective: none;
   }
 
   .book-page {
-    padding: .8rem;
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    transform: none !important;
+    padding: 1.5rem 1rem 4rem 1rem;
+    background: var(--pages-color);
+  }
+
+  .book-page.page-left {
+    box-shadow: none;
+  }
+
+  .book-page.page-right {
+    transform: none !important;
+    transform-style: flat !important;
+  }
+
+  .book-page.page-right.turn {
+    transform: none !important;
   }
 
   .page-front,
   .page-back {
-    padding: .8rem;
+    position: relative !important;
+    transform: none !important;
+    padding: 1rem;
+    background: transparent;
   }
 
   .profile-page {
     max-width: 100%;
   }
 
-  .profile-page h1, .profile-page h2 {
-    font-size: 1.4rem;
+  .profile-page h2 {
+    font-size: 1.6rem;
   }
 
   .profile-page h3 {
-    font-size: .95rem;
+    font-size: 1.1rem;
   }
 
   .profile-page img {
-    max-width: 100px;
-    margin-bottom: .6rem;
+    max-width: 120px;
   }
 
   .profile-page p {
-    font-size: .75rem;
-    margin: .6rem 0 1.5rem 0;
+    font-size: .85rem;
+    margin: 1rem 0;
   }
 
   .profile-page .btn-box {
-    width: 100%;
-    margin: 0 auto 60px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin: 1.5rem 0 2rem 0;
   }
 
   .profile-page .btn-box .btn {
-    width: 11rem;
-    height: 2.6rem;
-    font-size: .85rem;
-    margin: 0 auto .9rem auto;
-  }
-
-  .profile-page .btn-box .btn:last-child {
-    margin-bottom: 0;
+    width: 12rem;
+    height: 2.8rem;
+    font-size: .9rem;
+    display: block;
   }
 
   .title {
-    font-size: 1.2rem;
-    margin-bottom: .6rem;
-  }
-
-  .workeduc-box {
-    margin-bottom: 50px;
-  }
-
-  .workeduc-content {
-    margin-bottom: .6rem;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
   }
 
   .workeduc-content h3 {
-    font-size: .85rem;
+    font-size: .95rem;
   }
 
   .workeduc-content p {
-    font-size: .7rem;
-  }
-
-  .services-box {
-    gap: .5rem;
-    margin-bottom: 50px;
-  }
-
-  .services-box .services-content {
-    flex: 1 1 calc(50% - .25rem);
-    padding: .3rem .2rem;
-    min-height: 40px;
-  }
-
-  .services-content h3 {
-    font-size: .65rem;
-    line-height: 1.1;
-  }
-
-  .skills-box-compact {
-    gap: .25rem;
-    padding: 0;
-    margin-bottom: 50px;
-  }
-
-  .skills-box-compact span {
-    width: 2.4rem;
-    height: 2rem;
-    font-size: .5rem;
-    padding: .1rem;
-  }
-
-  .skills-box-compact span i {
-    font-size: .85rem;
-    margin-bottom: .05rem;
-  }
-
-  .portfolio-box {
-    margin-bottom: 60px;
-  }
-
-  .portfolio-box .img-box {
-    height: 8rem;
-  }
-
-  .portfolio-box .info-box {
-    margin: .5rem 0 1rem 0;
-  }
-
-  .portfolio-box .info-box .info-title h3 {
-    font-size: .9rem;
-  }
-
-  .portfolio-box .info-box p {
-    font-size: .65rem;
-  }
-
-  .portfolio-box .btn-box {
-    margin: 0 auto 60px auto;
-    width: 100%;
-  }
-
-  .portfolio-box .btn-box .btn {
-    display: block;
-    width: 9rem;
-    height: 2.4rem;
-    font-size: .75rem;
-    margin: 0 auto .8rem auto;
-  }
-
-  .portfolio-box .btn-box .btn:last-child {
-    margin-bottom: 0;
-  }
-
-  .contact-box {
-    max-width: 85%;
-    padding: .7rem;
-    margin: .5rem auto 60px auto;
-    max-height: 40vh;
-  }
-
-  .contact-box .field {
-    padding: .5rem;
-    margin-bottom: .7rem;
-    font-size: .75rem;
-  }
-
-  .contact-box textarea {
-    height: 3rem;
-  }
-
-  .contact-box .btn {
-    width: 7.5rem;
-    height: 2.2rem;
-    font-size: .75rem;
-    margin: .5rem auto;
-  }
-
-  .nextprev-btn {
-    width: 2.2rem;
-    height: 2.2rem;
-    font-size: 1.5rem;
-    bottom: 8px;
-  }
-
-  .nextprev-btn.back {
-    left: 8px;
-  }
-
-  .nextprev-btn.next-btn {
-    right: 8px;
-  }
-
-  .number-page {
-    bottom: 12px;
     font-size: .8rem;
   }
 
+  .services-box {
+    gap: .7rem;
+  }
+
+  .services-box .services-content {
+    flex: 1 1 calc(50% - .35rem);
+    padding: .5rem .3rem;
+  }
+
+  .services-content h3 {
+    font-size: .75rem;
+    line-height: 1.2;
+  }
+
+  .skills-box-compact {
+    gap: .4rem;
+    padding: 0 .3rem;
+  }
+
+  .skills-box-compact span {
+    width: 2.8rem;
+    height: 2.4rem;
+    font-size: .6rem;
+  }
+
+  .skills-box-compact span i {
+    font-size: 1rem;
+  }
+
+  .portfolio-box .img-box {
+    height: 10rem;
+  }
+
+  .portfolio-box .info-box .info-title h3 {
+    font-size: 1rem;
+  }
+
+  .portfolio-box .info-box p {
+    font-size: .75rem;
+  }
+
+  .portfolio-box .btn-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+
+  .portfolio-box .btn-box .btn {
+    width: 10rem;
+    height: 2.6rem;
+    font-size: .85rem;
+    display: block;
+  }
+
+  .contact-box {
+    max-width: 90%;
+    padding: 1.2rem;
+    margin: 1rem auto;
+  }
+
+  .contact-box .field {
+    padding: .7rem;
+    margin-bottom: 1rem;
+    font-size: .85rem;
+  }
+
+  .contact-box textarea {
+    height: 4.5rem;
+  }
+
+  .contact-box .btn {
+    width: 9rem;
+    height: 2.6rem;
+    font-size: .85rem;
+  }
+
+  .nextprev-btn,
+  .number-page {
+    display: none !important;
+  }
+
   .back-profile {
-    width: 2.2rem;
-    height: 2.2rem;
-    bottom: 8px;
-    right: 8px;
+    display: none !important;
   }
 
   .click-circle {
-    width: 20px;
-    height: 20px;
+    display: none;
   }
 }
 
