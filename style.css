@@ -632,43 +632,61 @@ body {
   }
 
   .book-page {
-    padding: 1rem 1rem 5rem 1rem;
+    padding: 1rem 1rem 6rem 1rem;
   }
 
   .profile-page {
     max-width: 95%;
+    padding-bottom: 2rem;
   }
 
   .profile-page h1, .profile-page h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     padding: .15rem .3rem;
   }
 
   .profile-page h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .profile-page img {
-    max-width: 140px;
+    max-width: 120px;
+  }
+
+  .profile-page p {
+    font-size: .85rem;
+    margin-bottom: 1rem;
   }
 
   .profile-page .btn-box {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.2rem;
     width: 100%;
     align-items: center;
     margin-top: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   .profile-page .btn-box .btn {
-    width: 13rem;
+    width: 14rem;
+    height: 3.2rem;
+    font-size: 1rem;
     margin: 0;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .workeduc-box {
+    margin-bottom: 5rem;
   }
 
   .services-box {
     gap: .8rem;
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
   }
 
   .services-box .services-content {
@@ -677,81 +695,91 @@ body {
   }
 
   .services-content h3 {
-    font-size: .85rem;
+    font-size: .8rem;
     line-height: 1.2;
-  }
-
-  .services-content p {
-    font-size: .75rem;
   }
 
   .skills-box-compact {
     gap: .4rem;
     padding: 0 .5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
   }
 
   .skills-box-compact span {
-    width: 3.2rem;
-    height: 2.6rem;
-    font-size: .65rem;
+    width: 3rem;
+    height: 2.5rem;
+    font-size: .6rem;
   }
 
   .skills-box-compact span i {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .portfolio-box {
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
   }
 
   .portfolio-box .img-box {
-    height: 12rem;
+    height: 10rem;
+  }
+
+  .portfolio-box .info-box {
+    margin: .8rem 0 1rem;
+  }
+
+  .portfolio-box .info-box .info-title h3 {
+    font-size: 1.1rem;
+  }
+
+  .portfolio-box .info-box p {
+    font-size: .8rem;
   }
 
   .portfolio-box .btn-box {
-    margin-bottom: 5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 6rem;
     flex-direction: column;
     align-items: center;
-    gap: .8rem;
+    gap: 1rem;
   }
 
   .portfolio-box .btn-box .btn {
-    width: 10rem;
-    height: 2.8rem;
-    font-size: .9rem;
+    width: 11rem;
+    height: 3rem;
+    font-size: .95rem;
     margin: 0;
   }
 
   .contact-box {
     max-width: 90%;
-    padding: 1.2rem;
-    margin: 1rem auto 5rem auto;
-    max-height: 55vh;
+    padding: 1rem;
+    margin: .8rem auto 6rem auto;
+    max-height: 50vh;
   }
 
   .contact-box .field {
-    padding: .8rem;
-    margin-bottom: 1.2rem;
-    font-size: .95rem;
+    padding: .7rem;
+    margin-bottom: 1rem;
+    font-size: .9rem;
   }
 
   .contact-box textarea {
-    height: 5rem;
+    height: 4.5rem;
   }
 
   .contact-box .btn {
     width: 9rem;
     height: 2.6rem;
-    font-size: .95rem;
+    font-size: .9rem;
+    margin: 1rem auto;
   }
 
   .nextprev-btn {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.8rem;
+    height: 2.8rem;
     font-size: 2rem;
-    bottom: 1.5rem;
-    z-index: 200;
+    bottom: 2rem;
+    z-index: 300;
   }
 
   .nextprev-btn.back {
@@ -763,21 +791,22 @@ body {
   }
 
   .number-page {
-    bottom: 1.8rem;
-    z-index: 200;
+    bottom: 2.3rem;
+    z-index: 300;
+    font-size: 1rem;
   }
 
   .back-profile {
-    width: 2.5rem;
-    height: 2.5rem;
-    bottom: 1.5rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    bottom: 2rem;
     right: 1.5rem;
-    z-index: 200;
+    z-index: 300;
   }
 
   .click-circle {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
 }
 
