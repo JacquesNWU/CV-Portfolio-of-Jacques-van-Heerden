@@ -650,29 +650,62 @@ body {
     max-width: 140px;
   }
 
-  .skills-box {
+  .profile-page .btn-box {
+    display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: .8rem;
+    width: 100%;
+    align-items: center;
+    margin-top: 1rem;
   }
 
-  .skills-box .skills-content {
-    flex: 1 1 100%;
-    min-width: 100%;
-    padding: 1.2rem;
+  .profile-page .btn-box .btn {
+    width: 12rem;
+    margin: 0;
   }
 
-  .skills-content .content {
-    gap: 1.2rem;
+  .services-box {
+    gap: 1rem;
+    margin-bottom: 3rem;
   }
 
-  .skills-content .content span {
-    width: 5.5rem;
-    height: 4.2rem;
+  .services-box .services-content {
+    padding: .6rem .4rem .8rem;
+  }
+
+  .services-content h3 {
     font-size: 1rem;
   }
 
-  .skills-content .content span i {
-    font-size: 2.2rem;
+  .services-content p {
+    font-size: .8rem;
+  }
+
+  .skills-box-compact {
+    gap: .5rem;
+    padding: 0 .5rem;
+    margin-bottom: 3rem;
+  }
+
+  .skills-box-compact span {
+    width: 3.5rem;
+    height: 2.8rem;
+    font-size: .7rem;
+  }
+
+  .skills-box-compact span i {
+    font-size: 1.2rem;
+  }
+
+  .portfolio-box .btn-box {
+    margin-bottom: 3rem;
+  }
+
+  .portfolio-box .btn-box .btn {
+    width: 8rem;
+    height: 2.5rem;
+    font-size: .85rem;
+    margin: 0 .5rem;
   }
 
   .contact-box {
