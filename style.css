@@ -11,13 +11,13 @@
 }
 
 :root {
-  --bg-color: #081b29;
+  --bg-color: #0f2027;
   --main-color: #00abf0;
-  --text-color: #e4e4e4;
-  --second-text-color: #b0b0b0;
+  --text-color: #e8e8e8;
+  --second-text-color: #b8b8b8;
   --white-color: #fff;
   --cover-color: linear-gradient(45deg, #00abf0, #006e9a);
-  --pages-color: linear-gradient(90deg, #1a1a1a, #2a2a2a);
+  --pages-color: linear-gradient(90deg, #1e2a35, #2a3945);
   --border: .125rem solid #00abf0;
   --box-shadow: 0 0 .6rem rgba(0, 171, 240, .3);
 }
