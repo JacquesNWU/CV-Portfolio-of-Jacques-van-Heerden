@@ -45,11 +45,13 @@ pageTurnBtn.forEach((el, index) => {
         if (pageTurn.classList.contains('turn')) {
             pageTurn.classList.remove('turn');
             setTimeout(() => {
+                // Adjust zIndex to make pages appear to close underneath each other
                 pageTurn.style.zIndex = 20 - index;
             }, 500);
         } else {
             pageTurn.classList.add('turn');
             setTimeout(() => {
+                // Adjust zIndex to make pages appear to open over each other
                 pageTurn.style.zIndex = 20 + index;
             }, 500);
         }
@@ -65,12 +67,14 @@ const contactMeBtn = document.querySelector('.btn.contact-me');
 contactMeBtn.onclick = () => {
     if (isAnimating) return;
     isAnimating = true;
+    // Base timeout on total pages for sequential turning
     setTimeout(() => { isAnimating = false; }, pages.length * 300 + 100);
 
     pages.forEach((page, index) => {
         setTimeout(() => {
             page.classList.add('turn');
             setTimeout(() => {
+                // Make the page stack correctly as it turns over
                 page.style.zIndex = 20 + index;
             }, 500);
         }, (index + 1) * 200 + 100);
@@ -81,7 +85,7 @@ contactMeBtn.onclick = () => {
 /* Jacques van Heerden (35317906) - Reverse Index Function      */
 /****************************************************************/
 let totalPages = pages.length;
-let pageNumber = 0;
+let pageNumber = totalPages - 1; // Start at the last page index
 
 function reverseIndex() {
     pageNumber--;
@@ -100,13 +104,15 @@ backProfileBtn.onclick = () => {
     isAnimating = true;
     setTimeout(() => { isAnimating = false; }, pages.length * 300 + 100);
 
+    // Reset pageNumber to the last page (index 2 for 3 pages) before starting the reverse close
+    pageNumber = totalPages - 1; 
+
     pages.forEach((_, index) => {
         setTimeout(() => {
-            reverseIndex();
             pages[pageNumber].classList.remove('turn');
             setTimeout(() => {
-                reverseIndex();
                 pages[pageNumber].style.zIndex = 10 + index;
+                reverseIndex(); // Decrease pageNumber after setting zIndex
             }, 500);
         }, (index + 1) * 200 + 100);
     });
@@ -139,13 +145,13 @@ setTimeout(() => {
 /****************************************************************/
 /* Jacques van Heerden (35317906) - Animate Right Pages Init   */
 /****************************************************************/
-pages.forEach((_, index) => {
+// Sets initial z-index for correct stacking and then sequentially opens pages
+pages.forEach((page, index) => {
+    // Set initial z-index for correct closed stacking (page 3 on top of 2 on top of 1)
+    page.style.zIndex = 10 + (totalPages - 1 - index);
+
+    // After the cover animation, sequentially open the pages
     setTimeout(() => {
-        reverseIndex();
-        pages[pageNumber].classList.remove('turn');
-        setTimeout(() => {
-            reverseIndex();
-            pages[pageNumber].style.zIndex = 10 + index;
-        }, 500);
+        page.classList.add('turn');
     }, (index + 1) * 200 + 2100);
 });
