@@ -397,9 +397,9 @@ body {
 }
 
 .skills-content h3 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
   color: var(--text-color);
 }
@@ -407,7 +407,7 @@ body {
 .skills-content .content {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: .8rem;
   justify-content: center;
 }
 
@@ -416,15 +416,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 6.5rem;
-  height: 5rem;
+  width: 5rem;
+  height: 3.8rem;
   border: var(--border);
   border-radius: .4rem;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: .85rem;
   transition: .3s ease;
   text-align: center;
-  padding: .5rem;
+  padding: .3rem;
   background: rgba(0, 171, 240, 0.05);
   color: var(--text-color);
 }
@@ -436,9 +436,9 @@ body {
 }
 
 .skills-content .content span i {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color: var(--main-color);
-  margin-bottom: .5rem;
+  margin-bottom: .3rem;
 }
 
 .portfolio-box .img-box {
