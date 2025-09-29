@@ -184,6 +184,12 @@ function initDesktopAnimations() {
     const pageLeft = document.querySelector('.book-page.page-left');
     const pages = document.querySelectorAll('.book-page.page-right');
 
+    // Start with all pages turned (closed)
+    pages.forEach((page, index) => {
+        page.classList.add('turn');
+        page.style.zIndex = 20 + index;
+    });
+
     // Open the cover
     setTimeout(() => {
         if (coverRight) coverRight.classList.add('turn');
@@ -197,17 +203,17 @@ function initDesktopAnimations() {
         if (pageLeft) pageLeft.style.zIndex = 20;
     }, 3200);
 
-    // Close all pages one by one (same as back-to-profile animation)
-    pages.forEach((_, index) => {
+    // Now flip pages back one by one (from last to first)
+    pageNumber = totalPages - 1;
+    for (let i = 0; i < totalPages; i++) {
         setTimeout(() => {
-            reverseIndex();
             pages[pageNumber].classList.remove('turn');
             setTimeout(() => {
-                reverseIndex();
-                pages[pageNumber].style.zIndex = 10 + index;
+                pages[pageNumber].style.zIndex = 10 + (totalPages - 1 - pageNumber);
             }, 500);
-        }, (index + 1) * 200 + 2100);
-    });
+            pageNumber--;
+        }, (i + 1) * 200 + 2100);
+    }
 }
 
 // Initialize animations on load
