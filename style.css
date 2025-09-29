@@ -13,8 +13,8 @@
 :root {
   --bg-color: #0f2027;
   --main-color: #00abf0;
-  --text-color: #e8e8e8;
-  --second-text-color: #b8b8b8;
+  --text-color: #f0f0f0;
+  --second-text-color: #c8c8c8;
   --white-color: #fff;
   --cover-color: linear-gradient(45deg, #00abf0, #006e9a);
   --pages-color: linear-gradient(90deg, #1e2a35, #2a3945);
