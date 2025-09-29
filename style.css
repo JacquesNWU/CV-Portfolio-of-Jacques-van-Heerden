@@ -13,13 +13,13 @@
 :root {
   --bg-color: #081b29;
   --main-color: #00abf0;
-  --text-color: #333;
-  --second-text-color: #555;
+  --text-color: #e4e4e4;
+  --second-text-color: #b0b0b0;
   --white-color: #fff;
   --cover-color: linear-gradient(45deg, #00abf0, #006e9a);
-  --pages-color: linear-gradient(90deg, #fff, #ddd);
+  --pages-color: linear-gradient(90deg, #1a1a1a, #2a2a2a);
   --border: .125rem solid #00abf0;
-  --box-shadow: 0 0 .6rem rgba(0, 0, 0, .2);
+  --box-shadow: 0 0 .6rem rgba(0, 171, 240, .3);
 }
 
 body {
@@ -91,13 +91,13 @@ body {
   width: 50%;
   height: 100%;
   background: var(--pages-color);
-  box-shadow: 0 0 .6rem rgba(0, 0, 0, .1);
+  box-shadow: 0 0 .6rem rgba(0, 171, 240, .2);
   display: flex;
   padding: 2rem;
 }
 
 .book-page.page-left {
-  box-shadow: -.6rem .6rem .6rem rgba(0, 0, 0, .1);
+  box-shadow: -.6rem .6rem .6rem rgba(0, 0, 0, .3);
 }
 
 .profile-page {
@@ -137,12 +137,7 @@ body {
   font-weight: 600;
   letter-spacing: .02rem;
   white-space: nowrap;
-  background: linear-gradient(45deg, var(--main-color), #006e9a);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  padding: .2rem .4rem;
-  border-radius: .3rem;
+  color: var(--text-color);
   margin-bottom: .6rem;
 }
 
@@ -180,6 +175,7 @@ body {
 .profile-page p {
   text-align: justify;
   font-size: .95rem;
+  color: var(--text-color);
 }
 
 .profile-page .btn-box {
@@ -254,6 +250,7 @@ body {
   text-align: center;
   margin-bottom: 1.2rem;
   font-size: 1.8rem;
+  color: var(--text-color);
 }
 
 .workeduc-box {
@@ -285,37 +282,56 @@ body {
   margin-right: .4rem;
 }
 
+.workeduc-content h3 {
+  color: var(--text-color);
+}
+
+.workeduc-content p {
+  color: var(--second-text-color);
+}
+
 .number-page {
   position: absolute;
   bottom: 1.2rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
+  color: var(--second-text-color);
 }
 
 .nextprev-btn {
   position: absolute;
-  bottom: .9rem;
-  right: 1.5rem;
-  width: 2rem;
-  height: 2rem;
+  bottom: 1.2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   cursor: pointer;
   font-size: 2rem;
-  color: var(--second-text-color);
+  color: var(--main-color);
+  background: rgba(0, 171, 240, 0.1);
+  border: var(--border);
+  border-radius: .3rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  transition: .5s;
-  position: relative;
-  overflow: hidden;
-  z-index: 10;
+  transition: .3s;
+  z-index: 100;
 }
 
 .nextprev-btn:hover {
-  color: var(--main-color);
+  background: var(--main-color);
+  color: var(--white-color);
+  transform: scale(1.1);
 }
 
 .nextprev-btn.back {
+  left: 1.5rem;
+}
+
+.page-front .nextprev-btn:not(.back) {
+  right: 1.5rem;
+}
+
+.page-back .nextprev-btn.back {
   left: 1.5rem;
 }
 
@@ -332,10 +348,12 @@ body {
   padding: .8rem .5rem 1.1rem;
   text-align: center;
   transition: .3s ease;
+  background: rgba(0, 171, 240, 0.05);
 }
 
 .services-box .services-content:hover {
   box-shadow: var(--box-shadow);
+  background: rgba(0, 171, 240, 0.1);
 }
 
 .services-content i {
@@ -345,10 +363,12 @@ body {
 
 .services-content h3 {
   font-size: 1.1rem;
+  color: var(--text-color);
 }
 
 .services-content p {
   margin: .2rem 0 .8rem;
+  color: var(--second-text-color);
 }
 
 .services-content .btn {
@@ -370,10 +390,12 @@ body {
   border: var(--border);
   border-radius: .5rem;
   transition: .3s ease;
+  background: rgba(0, 171, 240, 0.05);
 }
 
 .skills-box .skills-content:hover {
   box-shadow: var(--box-shadow);
+  background: rgba(0, 171, 240, 0.1);
 }
 
 .skills-content h3 {
@@ -381,6 +403,7 @@ body {
   line-height: 1;
   margin-bottom: 1.5rem;
   text-align: center;
+  color: var(--text-color);
 }
 
 .skills-content .content {
@@ -404,11 +427,14 @@ body {
   transition: .3s ease;
   text-align: center;
   padding: .5rem;
+  background: rgba(0, 171, 240, 0.05);
+  color: var(--text-color);
 }
 
 .skills-content .content span:hover {
   box-shadow: var(--box-shadow);
   transform: translateY(-0.2rem);
+  background: rgba(0, 171, 240, 0.1);
 }
 
 .skills-content .content span i {
@@ -424,6 +450,7 @@ body {
   border: var(--border);
   border-radius: .5rem;
   overflow: hidden;
+  background: rgba(0, 171, 240, 0.05);
 }
 
 .portfolio-box .img-box img {
@@ -449,6 +476,7 @@ body {
 
 .portfolio-box .info-box .info-title h3 {
   font-size: 1.3rem;
+  color: var(--text-color);
 }
 
 .portfolio-box .info-box .info-title a {
@@ -461,8 +489,13 @@ body {
   margin-left: .3rem;
 }
 
+.portfolio-box .info-box p {
+  color: var(--second-text-color);
+}
+
 .portfolio-box .info-box p:nth-of-type(1) {
   font-weight: 600;
+  color: var(--text-color);
 }
 
 .portfolio-box .btn-box {
@@ -474,13 +507,13 @@ body {
   margin: 0 1.15rem;
 }
 
-/* Jacques van Heerden (35317906) - Contact Page Styling */
 .contact-box {
   text-align: center;
   max-width: 70%;
   margin: 2.5rem auto;
   padding: 2rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, .05));
+  background: rgba(0, 171, 240, 0.08);
+  border: var(--border);
   border-radius: .8rem;
   box-shadow: var(--box-shadow);
   transition: transform .3s ease, box-shadow .3s ease;
@@ -490,12 +523,12 @@ body {
 
 .contact-box:hover {
   transform: translateY(-0.3rem);
-  box-shadow: 0 0 .8rem rgba(0, 171, 240, .3);
+  box-shadow: 0 0 1rem rgba(0, 171, 240, .4);
 }
 
 .contact-box .field {
   width: 100%;
-  background: rgba(255, 255, 255, .1);
+  background: rgba(0, 171, 240, 0.05);
   border: var(--border);
   border-radius: .6rem;
   padding: 1.2rem;
@@ -507,7 +540,7 @@ body {
 
 .contact-box .field:focus {
   border-color: var(--main-color);
-  background: rgba(255, 255, 255, .2);
+  background: rgba(0, 171, 240, 0.1);
   box-shadow: 0 0 .8rem var(--main-color);
 }
 
@@ -554,11 +587,11 @@ body {
 
 .back-profile {
   position: absolute;
-  bottom: 1rem;
+  bottom: 1.2rem;
   right: 1.5rem;
-  width: 2rem;
-  height: 2rem;
-  background: transparent;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgba(0, 171, 240, 0.1);
   border: var(--border);
   border-radius: .3rem;
   font-size: 1.1rem;
@@ -566,15 +599,14 @@ body {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  transition: .5s;
-  position: relative;
-  overflow: hidden;
-  z-index: 10;
+  transition: .3s;
+  z-index: 100;
 }
 
 .back-profile:hover {
   background: var(--main-color);
   color: var(--white-color);
+  transform: scale(1.1);
 }
 
 .back-profile p {
@@ -594,7 +626,6 @@ body {
   top: -1.8rem;
 }
 
-/* Jacques van Heerden (35317906) - Click Animation Styling */
 .click-circle {
   position: absolute;
   width: 40px;
@@ -621,7 +652,6 @@ body {
   }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .wrapper {
     width: 100%;
@@ -698,13 +728,30 @@ body {
     font-size: 1rem;
   }
 
-  .book-page.page-right {
-    transition: transform 0.7s ease-in-out;
+  .nextprev-btn {
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1.8rem;
+    bottom: 1rem;
   }
 
-  .cover.cover-right.turn,
-  .book-page.page-right.turn {
-    transform: rotateY(-180deg);
+  .nextprev-btn.back {
+    left: 1rem;
+  }
+
+  .page-front .nextprev-btn:not(.back) {
+    right: 1rem;
+  }
+
+  .page-back .nextprev-btn.back {
+    left: 1rem;
+  }
+
+  .back-profile {
+    width: 2.2rem;
+    height: 2.2rem;
+    bottom: 1rem;
+    right: 1rem;
   }
 
   .click-circle {
@@ -750,6 +797,17 @@ body {
     width: 8.5rem;
     height: 2.5rem;
     font-size: .9rem;
+  }
+
+  .nextprev-btn {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.6rem;
+  }
+
+  .back-profile {
+    width: 2rem;
+    height: 2rem;
   }
 
   .click-circle {
