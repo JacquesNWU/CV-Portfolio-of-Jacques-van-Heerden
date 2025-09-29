@@ -323,16 +323,14 @@ body {
   transform: scale(1.1);
 }
 
+/* Back arrows on left */
 .nextprev-btn.back {
   left: 1.5rem;
 }
 
-.page-front .nextprev-btn:not(.back) {
+/* Next arrows on right */
+.nextprev-btn.next-btn {
   right: 1.5rem;
-}
-
-.page-back .nextprev-btn.back {
-  left: 1.5rem;
 }
 
 .services-box {
@@ -510,14 +508,14 @@ body {
 .contact-box {
   text-align: center;
   max-width: 70%;
-  margin: 2.5rem auto;
+  margin: 1.5rem auto 4rem auto;
   padding: 2rem;
   background: rgba(0, 171, 240, 0.08);
   border: var(--border);
   border-radius: .8rem;
   box-shadow: var(--box-shadow);
   transition: transform .3s ease, box-shadow .3s ease;
-  max-height: 75vh;
+  max-height: 65vh;
   overflow-y: auto;
 }
 
