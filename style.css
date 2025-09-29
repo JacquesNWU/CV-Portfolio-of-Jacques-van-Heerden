@@ -625,19 +625,31 @@ body {
 }
 
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .wrapper {
     width: 100%;
     height: auto;
+    min-height: 100vh;
     padding: 1rem;
   }
 
   .book-page {
-    padding: 1rem 1rem 6rem 1rem;
+    padding: 1rem;
+    min-height: 600px;
+    position: relative;
+  }
+
+  .page-front,
+  .page-back {
+    padding-bottom: 80px !important;
   }
 
   .profile-page {
     max-width: 95%;
-    padding-bottom: 2rem;
+    padding-bottom: 100px;
   }
 
   .profile-page h1, .profile-page h2 {
@@ -659,19 +671,21 @@ body {
   }
 
   .profile-page .btn-box {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
-    width: 100%;
+    gap: 1rem;
+    width: auto;
     align-items: center;
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
   }
 
   .profile-page .btn-box .btn {
-    width: 14rem;
-    height: 3.2rem;
-    font-size: 1rem;
+    width: 13rem;
+    height: 3rem;
+    font-size: .95rem;
     margin: 0;
   }
 
@@ -681,42 +695,41 @@ body {
   }
 
   .workeduc-box {
-    margin-bottom: 5rem;
+    padding-bottom: 80px;
   }
 
   .services-box {
-    gap: .8rem;
-    margin-bottom: 6rem;
+    gap: .7rem;
+    padding-bottom: 80px;
   }
 
   .services-box .services-content {
-    flex: 1 1 calc(50% - .4rem);
-    padding: .5rem .3rem .6rem;
+    flex: 1 1 calc(50% - .35rem);
+    padding: .4rem .3rem .5rem;
   }
 
   .services-content h3 {
-    font-size: .8rem;
+    font-size: .75rem;
     line-height: 1.2;
   }
 
   .skills-box-compact {
-    gap: .4rem;
-    padding: 0 .5rem;
-    margin-bottom: 6rem;
+    gap: .35rem;
+    padding: 0 .3rem 80px .3rem;
   }
 
   .skills-box-compact span {
-    width: 3rem;
-    height: 2.5rem;
-    font-size: .6rem;
+    width: 2.8rem;
+    height: 2.3rem;
+    font-size: .58rem;
   }
 
   .skills-box-compact span i {
-    font-size: 1rem;
+    font-size: .95rem;
   }
 
   .portfolio-box {
-    margin-bottom: 6rem;
+    padding-bottom: 80px;
   }
 
   .portfolio-box .img-box {
@@ -728,80 +741,87 @@ body {
   }
 
   .portfolio-box .info-box .info-title h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .portfolio-box .info-box p {
-    font-size: .8rem;
+    font-size: .75rem;
   }
 
   .portfolio-box .btn-box {
-    margin-top: 1.5rem;
-    margin-bottom: 6rem;
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: .8rem;
+    margin: 0;
   }
 
   .portfolio-box .btn-box .btn {
-    width: 11rem;
-    height: 3rem;
-    font-size: .95rem;
+    width: 10rem;
+    height: 2.8rem;
+    font-size: .85rem;
     margin: 0;
   }
 
   .contact-box {
     max-width: 90%;
     padding: 1rem;
-    margin: .8rem auto 6rem auto;
-    max-height: 50vh;
+    margin: .8rem auto 90px auto;
+    max-height: 48vh;
   }
 
   .contact-box .field {
-    padding: .7rem;
-    margin-bottom: 1rem;
-    font-size: .9rem;
+    padding: .65rem;
+    margin-bottom: .9rem;
+    font-size: .85rem;
   }
 
   .contact-box textarea {
-    height: 4.5rem;
+    height: 4rem;
   }
 
   .contact-box .btn {
-    width: 9rem;
-    height: 2.6rem;
-    font-size: .9rem;
-    margin: 1rem auto;
+    width: 8.5rem;
+    height: 2.5rem;
+    font-size: .85rem;
+    margin: .8rem auto;
   }
 
   .nextprev-btn {
-    width: 2.8rem;
-    height: 2.8rem;
-    font-size: 2rem;
-    bottom: 2rem;
-    z-index: 300;
+    position: fixed !important;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.8rem;
+    bottom: 15px !important;
+    z-index: 999 !important;
   }
 
   .nextprev-btn.back {
-    left: 1.5rem;
+    left: 15px !important;
   }
 
   .nextprev-btn.next-btn {
-    right: 1.5rem;
+    right: 15px !important;
   }
 
   .number-page {
-    bottom: 2.3rem;
-    z-index: 300;
-    font-size: 1rem;
+    position: fixed !important;
+    bottom: 20px !important;
+    z-index: 999 !important;
+    font-size: .9rem;
   }
 
   .back-profile {
-    width: 2.8rem;
-    height: 2.8rem;
-    bottom: 2rem;
-    right: 1.5rem;
-    z-index: 300;
+    position: fixed !important;
+    width: 2.5rem;
+    height: 2.5rem;
+    bottom: 15px !important;
+    right: 15px !important;
+    z-index: 999 !important;
   }
 
   .click-circle {
