@@ -19,7 +19,7 @@
 ---
 
 ### About Me
-As a solutions engineer with expertise in AI implementation and helpdesk automation, I have a solid IT foundation complemented by my academic background. I am particularly drawn to penetration testing and web application security, while also dedicating time outside of work hours to developing machine learning models and exploring AI-driven software development.
+I am a systems engineer with a strong IT foundation and hands-on experience across diverse technical environments. I have a particular passion for penetration testing and web application security, and I dedicate much of my spare time to exploring AI-driven approaches to software development.
 
 ---
 
@@ -84,104 +84,55 @@ As a solutions engineer with expertise in AI implementation and helpdesk automat
 ---
 
 ### Professional Experience
-**Solutions Engineer (Security Incident Responder) | Scaled | 2023/07/05 - Present**
-Job Description:
+Systems Engineer | Scaled | 2023/07/05 - Present
+•	Job description:
+o	Secure and optimize client networks, endpoints, and cloud environments.
+o	Identify and remediate security vulnerabilities and ensure compliance.
+o	Develop automation scripts to enhance helpdesk operations.
+o	Provide incident response support and threat mitigation.
+o	Maintain documentation of security incidents and automation workflows.
+•	Key achievements
+o	TSI (Type/Subtype/Item) Project – Organized ticket Type/Subtype/Items for PIA integration and revamped knowledge base to enable targeted automation.
+o	Dispatch Covering – Managed high-priority incidents and developed SOPs during dispatch manager's leave.
+o	Team Player Award - Recognized for exceptional communication skills, a consistently uplifting attitude, and fostering a positive, cohesive team environment.
 
-- Secure and optimise client networks, endpoints, and cloud environments by implementing proactive cybersecurity measures.
-- Identify and remediate security vulnerabilities, ensuring compliance with best practices and industry standards.
-- Develop and deploy automation scripts and tools to enhance helpdesk operations and reduce manual workload.
-- Collaborate with internal teams and external vendors to implement and refine solutions.
-- Provide incident response support, investigating security alerts and mitigating threats.
-- Maintain detailed documentation of security incidents, configurations, and automation workflows for continuous improvement.
+IT Supervisor | Prime Meridian Direct | 2021/06/22 – 2023/07/01
+•	Job description:
+o	Supervised IT operations for 200+ end-users and managed technician team.
+o	Oversaw infrastructure upgrades, patch management, and endpoint protection.
+o	Led security hardening projects aligned with CIS Controls (v8).
+o	Coordinated system migrations and vendor relationships.
+•	Key achievements
+o	IT Performer of the year award.
 
----
+Owner / Lead Technical Support | Backend IT (Pty) Ltd | 2019/08/01 – 2021/06/19
+•	Job description:
+o	Provided IT support for small to medium-sized businesses
+o	Designed secure network infrastructures and managed Microsoft 365 migrations
+o	Performed server maintenance, backups, and disaster recovery planning
+o	Handled client acquisition and delivered training sessions
 
-**IT Supervisor | Prime Meridian Direct | 2021/06/22 – 2023/07/01
-Employment Duration – 2 Years and 1 Month**
-Job Description:
+Senior IT Administrator | IT Tech Services | 2019/07/22 – 2020/10/01 
+•	Job description:
+o	Administered Windows Server, Active Directory, and Group Policies
+o	Implemented firewall rules and network segmentation
+o	Resolved escalated support issues and mentored junior staff
 
-- Supervised daily IT operations and support for over 200 end-users.
-- Managed a team of technicians, assigning tasks and ensuring SLA compliance.
-- Oversaw infrastructure upgrades and patch management across all departments.
-- Coordinated cybersecurity initiatives, including endpoint protection and staff training.
-- Provided technical leadership for system migrations and software rollouts.
-- Liaised with vendors and service providers for procurement and support contracts.
-- Led phased implementation of security hardening projects aligned with CIS Controls (v8), including user access reviews, secure configuration baselines, and continuous monitoring enhancements.
+Junior IT Manager | Laerskool Kenmare | 2018/11/05 – 2019/03/30 
+•	Job description:
+o	Maintained school IT infrastructure, including servers, Wi-Fi, and smart classrooms.
+o	Provided on-site support for staff and student hardware/software issues.
+o	Managed user accounts and access permissions.
+o	Handled IT budgeting and procurement of hardware/software.
+o	Implemented antivirus and basic cybersecurity controls.
 
----
-
-**Owner/Lead Technical Support | Backend IT (Pty) Ltd | 2019/08/01 – 2021/06/19
-Employment Duration – 11 Months**
-Job Description:
-
-- Provided on-site and remote IT support for small to medium-sized businesses.
-- Designed and implemented secure network infrastructures (Wi-Fi, LAN, VPN).
-- Managed Microsoft 365 migrations and tenant configurations.
-- Performed server maintenance, backups, and disaster recovery planning.
-- Handled client acquisition, billing, and contract negotiation.
-- Consulted on cybersecurity best practices and performed vulnerability scans.
-- Developed SOPs and documentation for recurring IT processes.
-- Delivered client training sessions on IT tools and systems.
-
----
-
-**Senior IT Administrator | IT Tech Services | 2019/07/22 – 2020/10/01
-Employment Duration – 1 Year and 4 Months**
-Job Description:
-
-- Administered Windows Server, Active Directory, and Group Policies.
-- Managed VoIP systems, cloud backups, and data integrity checks.
-- Resolved escalated support issues and performed system audits.
-- Implemented firewall rules and network segmentation for security.
-- Mentored junior staff and coordinated with vendors on IT assets.
-
----
-
-**Junior IT Manager | Laerskool Kenmare | 2018/11/05 – 2019/03/30
-Employment Duration – 6 Months**
-Job Description:
-
-- Maintained school IT infrastructure, including servers, Wi-Fi, and smart classrooms.
-- Provided on-site support for staff and student hardware/software issues.
-- Managed user accounts and access permissions.
-- Handled IT budgeting and procurement of hardware/software.
-- Implemented antivirus and basic cybersecurity controls.
-
----
-
-**Service Desk Engineer | Vodacom Midrand | 2018/07/01 – 2018/11/01
-Employment Duration – 5 Months**
-Job Description:
-
-- Provided Level 1–2 support for network, software, and mobile device issues.
-- Logged and escalated tickets using the internal ITSM platform.
-- Assisted with new user setups and system access provisioning.
-- Delivered remote and on-site support to enterprise clients.
-- Participated in daily support meetings and SLA tracking.
-
----
-
-### Projects
-2024/07 – 2025/07: Helpdesk Automation & Enterprise Security Enhancements
-
-- Successfully worked on projects involving enterprise applications, SSO configurations, and an in-house helpdesk automation initiative.
-- Leveraged tools such as ConnectWise, PIA, and inline PowerShell scripting to streamline operations and enhance efficiency.
-- Initiated a project that accounts for the automation of skills-based routing of tickets to reduce response times and improve first-call resolution rates.
-
---- 
-
-2024/11 – 2025/05: Dispatch & Incident Coordination
-
-- Took on the role of dispatch coordinator during the dispatch manager’s leave, ensuring rapid response to high-priority requests, incidents, and ticket escalations.
-- Developed and enforced standard operating procedures (SOPs) for handling general helpdesk requests, cybersecurity incidents, reducing response times and improving efficiency.
-
----
-
-2024: DVD Store Project
-
----
-
-2024: NWU 312 Exam Project (Medical System Booking)
+Service Desk Engineer | Vodacom Midrand | 2018/07/01 – 2018/11/01 
+•	Job description:
+o	Provided Level 1–2 support for network, software, and mobile device issues.
+o	Logged and escalated tickets using the internal ITSM platform.
+o	Assisted with new user setups and system access provisioning.
+o	Delivered remote and on-site support to enterprise clients.
+o	Participated in daily support meetings and SLA tracking.
 
 ---
 
@@ -191,43 +142,5 @@ Job Description:
 2024 - **Golden Key International Honour Society:** North-West University
 
 2024 - **Team Player Award:** Scaled Recognised for exceptional communication skills, a consistently uplifting attitude, and fostering a positive, cohesive team environment.
-
----
-
-### Technical Skills
-- Cloud Computing
-- Virtualization
-- Networking
-- Scripting
-- End-user Support
-- Automation Tools
-- Security
-- Database Management
-- Software Development
-
----
-
-### Interpersonal Skills
-- Delegation & Leadership
-- Comprehensive Reporting & Documentation
-- Attention to Detail
-- Effective Communication & Team Collaboration
-- Analytical Thinking & Problem-Solving
-- Time Management & Prioritisation
-
----
-
-### Technologies
-- Windows Server (2008/2012/2016/2019)
-- Fortinet, Mikrotik, SonicWALL
-- Cisco Meraki, VMware ESXi, VPN
-- Microsoft 365, Google Workspace, Azure AD
-- ThreatLocker, Huntress, ESET, Sophos
-- ConnectWise, Kaseya VSA, PIA
-- Veeam, Acronis, Datto
-- PowerShell, Batch Scripting
-- IT Glue, Snipe-IT
-- Altigen, Euphoria, Microsoft Teams, 3CX
-- Java, C#.NET, ASP.NET, Python, SQL
 
 
